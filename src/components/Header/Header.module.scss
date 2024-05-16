@@ -1,0 +1,102 @@
+.topHeader {
+    background-color: #d7ede8;
+}
+
+@media (min-width: 900px) {
+    .topHeader {
+        height: 30px;
+    }
+}
+
+.bottom {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px 2px rgba(66, 68, 90, .14);
+    margin: 0 auto;
+
+    .bottomContainer {
+        margin: 0 auto !important;
+        overflow: visible;
+    }
+
+    @media (min-width: 1200px) {
+        .bottomContainer {
+            max-width: 1200px;
+        }
+    }
+
+    .bottomContainerInner {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: auto;
+        width: 100%;
+        .logoss{
+            padding: 16px 14px;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+        }
+
+        .anchor {
+            line-height: 24px;
+            padding: 12px 14px;
+            .search {
+                padding: 16px 14px;
+            }
+        }
+        .anchor:hover{
+            background: #d8ede8;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .anchorActive{
+            color: #2e7f89 !important;
+            font-weight: 800 !important; 
+            line-height: 24px;
+            padding: 12px 14px;       
+        }
+        .anchorActive:hover{
+            background: #d8ede8;
+            border-radius: 5px;
+            text-decoration: none;        
+        }
+        .cart{
+            padding: 15px;
+            position: relative;
+            .cartContent{
+                box-shadow: 2px 2px 10px 2px rgba(66, 68, 90, .14);
+    display: none;
+    position: sticky;
+    border: 1px solid #ececec;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+    top: 45px;
+    z-index: 1;
+    right: 0;
+    width: 360px;
+    max-width: calc(100vw - 50px);
+    .noProducts{
+        margin: 40px 0px;
+    }
+            }
+        }
+        .cart:hover{
+            cursor: pointer;
+            background: rgba(61, 167, 180, .039);
+            text-decoration: none;
+        }
+        .cart:hover{
+            .cartContent{
+                display: block;
+                position: absolute;
+            }
+        }
+    }
+}
