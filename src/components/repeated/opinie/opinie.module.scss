@@ -17,3 +17,15 @@
         flex-direction: column;
     }
 }
+.link{
+    background-color: transparent;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: underline;
+}
+.link:hover{
+   background-color: transparent;
+    color: var(--primary-hover);
+}

@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Photo from "../../../../public/assets/HomePage/Ebook/ebook_product-title.webp";
-import styles from "./Ebook.module.scss";
+import styles from "./Four.module.scss";
 import Arrow from "../../../../public/assets/HomePage/Help/arrow.jsx";
 import Link from "next/link";
 
-export default async function Ebook() {
+export default async function Four() {
 
 
   return (

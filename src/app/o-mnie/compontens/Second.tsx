@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Photo from "../../../../public/assets/HomePage/Ebook/ebook_product-title.webp";
-import styles from "./Ebook.module.scss";
-import Arrow from "../../../../public/assets/HomePage/Help/arrow.jsx";
+import styles from "./Second.module.scss";
 import Link from "next/link";
 
-export default async function Ebook() {
+async function Second() {
 
 
   return (
@@ -12,9 +11,9 @@ export default async function Ebook() {
       <section className={`${styles.Ebook} d-flex flex-center`}>
         <div className={`Container m-auto`}>
           <div className={`${styles.topSection} flex flex-col items-center`}>
-            <h2>Mój pierwszy e-book</h2>
+            <h2>Codzienna praca z pacjentami</h2>
             <p>
-             Asymetria ułoeniowa - poradniik dla rodzica
+            Specjalizuję się w fizjoterapii niemowląt oraz dzieci z wadami postawy
             </p>
           </div>
           <div className={`${styles.bottomSection} flex  items-center`}>
@@ -25,14 +24,13 @@ export default async function Ebook() {
                 </div>
                 </div>
                 <div className={`${styles.rightSection} w-full flex flex-col gap-3 items-center`}>
+                <div className="font-bold"><h3>Kraków i Warszawa</h3></div>
                 <div className={`${styles.text} flex flex-col gap-3`}>
-                    <p>Jestem autorką e-booka Asymetria ułożeniowa - poradnik dla rodzica. To jedyna taka książka w Polsce i na świecie!</p>
-                    <p>Znajdziesz w niej wiedzę medyczną oraz praktyczne wskazówkami dla rodziców. Dowiesz się jak zapobiegać asymetrii oraz wspierać dziecko, które ma postawioną diagnozę.</p>
+                    <p>Jestem absolwentką Collegium Medicum w Krakowie. Pierwsze doświadczenia w pracy z maluszkami zdobyłam w Hospicjum domowym dla dzieci Alma Spei.</p>
+                    <p>Pomagam w formie wizyt domowych w Krakowie i w Warszawie oraz podczas konsultacji on-line. W sprawie wizyt możesz kontaktować się ze mną telefonicznie albo za pomocą Facebooka lub Instagrama.</p>
+                    <p>Rodzice nazywają mnie zaklinaczką dzieci. Pomagam nawet tym, które nieustannie płaczą i wymagają ciągłego noszenia na rękach.</p>
                     </div>
-                    <div className={`${styles.button}`}>
-                    <Link href="/filmy-i-ebooki/asymetria-ulozeniowa">
-                        <button className="Button_button__6pObN">DOWIEDZ SIĘ WIĘCEJ</button></Link>
-       </div>
+             
           </div>
         </div>
         </div>
@@ -42,3 +40,4 @@ export default async function Ebook() {
   );
 }
 
+export default Second;

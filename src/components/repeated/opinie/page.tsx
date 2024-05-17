@@ -32,10 +32,10 @@ async function Opinion() {
     </div>
   </div>
   <div className={` flex gap-4 mt-5`}>
-  <Image src={Chat} width={20} height={20} alt="chat" />
-    <a href="https://www.facebook.com/efizjotekaMagdalenaAdas">
+  <Image className={` `} src={Chat} width={20} height={20} alt="chat" />
+    <Link className={` ${styles.link}`} href="https://www.facebook.com/efizjotekaMagdalenaAdas">
       <b>Te i więcej recenzji przeczytasz na moim fanpage'u</b>
-    </a>
+    </Link>
   </div>
       </section>
     </>

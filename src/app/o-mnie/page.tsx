@@ -1,14 +1,27 @@
-import styles from "./O-mnie.module.scss";
+
+import Hero from "./compontens/Hero";
+import Second from "./compontens/Second";
+import Third from "./compontens/Third";
+import Four from "./compontens/Four";
+import Five from "../kurs-noszenia/components/Eight";
+import Six from "../../components/Homepage/Contact/page"
 import Breadcrumbs from "@/components/breadcrumbs/page";
 
-export default async function About() {
+
+export default async function   HomeLayout() {
 
 
-  return (
+  return ( 
     <>
-    <Breadcrumbs />
- 
+        <Breadcrumbs />
+        <Hero  />
+        <Second />
+        <Third />
+        <Four />
+        <Five  />
+        <Six />
+
+
     </>
   );
-}
-
+};

@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Photo from "../../../../public/assets/HomePage/Ebook/ebook_product-title.webp";
-import styles from "./Ebook.module.scss";
-import Arrow from "../../../../public/assets/HomePage/Help/arrow.jsx";
+import styles from "./Second.module.scss";
 import Link from "next/link";
 
-export default async function Ebook() {
+async function Second() {
 
 
   return (
@@ -12,9 +11,9 @@ export default async function Ebook() {
       <section className={`${styles.Ebook} d-flex flex-center`}>
         <div className={`Container m-auto`}>
           <div className={`${styles.topSection} flex flex-col items-center`}>
-            <h2>Mój pierwszy e-book</h2>
+            <h2>Codzienna praca z pacjentami</h2>
             <p>
-             Asymetria ułoeniowa - poradniik dla rodzica
+            Specjalizuję się w fizjoterapii niemowląt oraz dzieci z wadami postawy
             </p>
           </div>
           <div className={`${styles.bottomSection} flex  items-center`}>
@@ -25,14 +24,20 @@ export default async function Ebook() {
                 </div>
                 </div>
                 <div className={`${styles.rightSection} w-full flex flex-col gap-3 items-center`}>
+                <div className="font-bold"><h3>Jak przebiega wizyta</h3></div>
                 <div className={`${styles.text} flex flex-col gap-3`}>
-                    <p>Jestem autorką e-booka Asymetria ułożeniowa - poradnik dla rodzica. To jedyna taka książka w Polsce i na świecie!</p>
-                    <p>Znajdziesz w niej wiedzę medyczną oraz praktyczne wskazówkami dla rodziców. Dowiesz się jak zapobiegać asymetrii oraz wspierać dziecko, które ma postawioną diagnozę.</p>
+                
+                    <ul>
+                        <li>Na pierwszej wizycie zbieram wywiad od rodzica i  badam maluszka.</li>
+                        <li>Stawiam diagnozę i tłumaczę, jak mogę pomóc dziecku.</li>
+                        <li>Uczę rodzica prawidłowej pielęgnacji, czyli noszenia, podnoszenia, przewijania itp.</li>
+                        <li>Rozluźniam, masuję i ćwiczę z dzieckiem.</li>
+                        <li>Pokazuję ćwiczenia domowe dla rodzica i sprawdzam poprawność ich wykonania.</li>
+                        </ul>
+
+<b>Zależy mi na edukacji rodzica. Na konsultacji u mnie nauczysz się jak ćwiczyć z dzieckiem.</b>
                     </div>
-                    <div className={`${styles.button}`}>
-                    <Link href="/filmy-i-ebooki/asymetria-ulozeniowa">
-                        <button className="Button_button__6pObN">DOWIEDZ SIĘ WIĘCEJ</button></Link>
-       </div>
+             
           </div>
         </div>
         </div>
@@ -42,3 +47,4 @@ export default async function Ebook() {
   );
 }
 
+export default Second;

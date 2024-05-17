@@ -74,9 +74,9 @@ activeClassName={styles.anchorActive}>Start</ActiveLink>
 <Link className={styles.anchor} href="/blog">Blog</Link>
 <Link className={styles.anchor} href="/filmy-i-ebooki">Filmy i ebooki</Link>
 <Link className={styles.anchor} href="/kurs-noszenia">Kurs noszenia</Link>
-<Link className={styles.anchor} href="/FizQuiz">FizQuiz</Link>
+<Link className={styles.anchor} href="/fizQuiz">FizQuiz</Link>
 <Link className={styles.anchor} href="/o-mnie">O mnie</Link>
-<Link className={styles.anchor} href="/Wizyta">Wizyta</Link>
+<Link className={styles.anchor} href="/wizyta">Wizyta</Link>
 <button>En</button>
 <div className={styles.cart}> 
 <Image
