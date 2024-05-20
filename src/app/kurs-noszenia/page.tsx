@@ -13,25 +13,23 @@ import Tvelwe from "./components/Tvelwe";
 import Thirteen from "./components/Thirteen";
 
 function Hero() {
-
-
-  return (
-    <>
-<Main />
-<Second />
-<Third />
-<Four />
-<Five />
-<Six />
-<Seven />
-<Eight />
-<Nine />
-<Ten />
-<Eleven />
-<Tvelwe />
-<Thirteen />
-    </>
-  );
+	return (
+		<>
+			<Main />
+			<Second />
+			<Third />
+			<Four />
+			<Five />
+			<Six />
+			<Seven />
+			<Eight />
+			<Nine />
+			<Ten />
+			<Eleven />
+			<Tvelwe />
+			<Thirteen />
+		</>
+	);
 }
 
 export default Hero;

@@ -1,27 +1,24 @@
-.Help{
-    display: flex;
-    justify-content: center;
-    .topSection{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .bottomSection{
-        display: flex;
-        width: 100%;
-        gap: 30px;    
-        .bottomItem{
-            background-color: #f5f6f5;
-            .button{
-                background-color: transparent;
-                color: var(--primary);
-                display: flex;
-                align-items: center;
-                gap: 5px;
-            
-            
-            }
-        }
-    
-    }
+.Help {
+	display: flex;
+	justify-content: center;
+	.topSection {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.bottomSection {
+		display: flex;
+		width: 100%;
+		gap: 30px;
+		.bottomItem {
+			background-color: #f5f6f5;
+			.button {
+				background-color: transparent;
+				color: var(--primary);
+				display: flex;
+				align-items: center;
+				gap: 5px;
+			}
+		}
+	}
 }
