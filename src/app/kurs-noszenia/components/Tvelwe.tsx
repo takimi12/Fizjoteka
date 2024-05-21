@@ -45,7 +45,7 @@ const data = [
 	},
 	{
 		title: "Codzienne rutyny w opiece nad maluszkiem",
-		subititle: "Dowiesz się ",
+		subtitle: "Dowiesz się ",
 		content: [
 			"w jakich pozycjach układać dziecko,",
 			"od kiedy układać dziecko na brzuszku,",
@@ -100,8 +100,8 @@ const Tvelwe = () => {
 		<section className={` flex justify-center ${styles.tvelve}`}>
 			<div className={` Container`}>
 				<div className={` flex flex-col  justify-center text-center `}>
-					<h5 className={``}>Co znajdziesz w kursie</h5>
-					<h6 className={` mb-10 mt-10`}>
+					<h2 className={``}>Co znajdziesz w kursie</h2>
+					<h6 className={` mb-5 mt-5 ${styles.subtitle}`}>
 						Kurs przygotowałam na podstawie najczęstszych pytań, jakie dostaję podczas konsultacji.
 						Aby uzyskać odpowiedzi na nie wszystkie, potrzebowalibyśmy minimum 5 wizyt! A w tym
 						kursie otrzymujesz to w cenie jednej wizyty z fizjoterapeutą.
@@ -111,15 +111,14 @@ const Tvelwe = () => {
 					{data.map((item, index) => (
 						<div key={index} className={` ${styles.card}`}>
 							<h5 className={` mb-4`}>{item.title}</h5>
-							<span>
-								<ul>
+							<span className={` ${styles.subtitle}`}>{item.subtitle}</span>
+								<ul className={` ${styles.ul}`}>
 									{item.content.map((point, idx) => (
-										<li key={idx}>
-											<span>{point}</span>
+										<li className={` ${styles.point}`} key={idx}>
+											<span className={` ${styles.pointer}`}>{point}</span>
 										</li>
 									))}
 								</ul>
-							</span>
 						</div>
 					))}
 				</div>

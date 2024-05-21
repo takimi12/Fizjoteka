@@ -6,15 +6,15 @@ import Link from "next/link";
 async function Hero() {
 	return (
 		<>
-			<section className={`${styles.Ebook} d-flex flex-center`}>
+			<section className={`${styles.Quiz} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
-					<div className={`${styles.topSection} flex flex-col items-center`}>
+					<div className={`${styles.topSection} flex flex-col `}>
 						<h2>FizQuiz Asymetria</h2>
 					</div>
 					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className="Inner flex items-center">
+						<div className={`Inner flex items-center`}>
 							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
-								<div className={`${styles.text} flex flex-col gap-3`}>
+								<div className={`${styles.text} flex flex-col gap-5`}>
 									<p>
 										Asymetria ułożeniowa to jedno z najczęstszych schorzeń u niemowląt. Rodzice
 										często jednak nie wiedzą dużo na jej temat.
@@ -25,8 +25,8 @@ async function Hero() {
 									</p>
 								</div>
 								<div className={`${styles.button}`}>
-									<Link href="/filmy-i-ebooki/asymetria-ulozeniowa">
-										<button className="Button_button__6pObN">przejdź quiz</button>
+									<Link href="/fizzquiz">
+										<button className={``}>Przejdź quiz</button>
 									</Link>
 								</div>
 							</div>

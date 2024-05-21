@@ -1,3 +1,11 @@
+.Eleven{
+	.top{
+		h4{
+			font-size: 25px;
+		}
+	}
+}
+
 .singleBox {
 	border: 1px solid #ececec;
 	border-radius: 5px;
@@ -7,7 +15,7 @@
 	flex-direction: column;
 	background: #f7f7f7;
 	margin-top: 20px;
-}
+
 .available {
 	position: absolute;
 	top: -16px;
@@ -17,6 +25,10 @@
 	color: #fff;
 	font-size: 12px;
 	text-transform: uppercase;
+	.availableprize{
+		font-weight: 400;
+	}
+
 }
 .date {
 	position: absolute;
@@ -31,14 +43,22 @@
 	color: #255a6b;
 	text-decoration: underline;
 	text-decoration-color: rgba(37, 90, 107, 0.4);
+	.title{
+		font-size: 25px;
+	}
 }
 .subtitle {
 	color: #8d8d8d;
 }
 
 .listParent {
-	min-height: 430px;
+	min-height: 510px;
 	.list {
 		list-style-type: disc;
+		color: var(--primary);
 	}
 }
+
+}
+
+

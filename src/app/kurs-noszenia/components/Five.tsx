@@ -9,10 +9,10 @@ async function Five() {
 			<section className={`${styles.Ebook} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
 					<div className={`${styles.topSection} flex flex-col items-center`}>
-						<h2>Cześć!</h2>
-						<p>Nazywam sie Magdalena Adas</p>
+						<h2>Czy też popełniasz ten błąd?</h2>
+
 					</div>
-					<div className={`${styles.bottomSection} flex  items-center`}>
+					<div className={`${styles.bottomSection} flex  items-center mt-20`}>
 						<div className="Inner flex items-center gap-10">
 							<div className={`${styles.leftSection} w-full`}>
 								<div className={`${styles.image} flex justify-center`}>
@@ -21,18 +21,16 @@ async function Five() {
 							</div>
 							<div className={`${styles.rightSection} flex w-full flex-col justify-center gap-3`}>
 								<div className={`${styles.text} flex flex-col gap-3`}>
-									<h6>Jestem fizjoterapeutką dziecięcą i edukatorką.</h6>
 									<p>
-										Ukończyłam Collegium Medicum Uniwersytetu Jagiellońskiego w Krakowie. Aktualnie
-										pracuję w Krakowie i w Warszawie.
+									Najczęściej rodzice podnoszą dziecko pod głową i pod pupą. 
+
 									</p>
 									<p>
-										Na co dzień zajmuję się rehabilitacją najmłodszych pacjentów oraz wspieraniem
-										ich rodziców.
+									Mimo, że to najprostszy i najszybszy sposób podnoszenia, nie jest zdrowy ani dla dziecka, ani dla rodzica. 
+
 									</p>
 									<p>
-										Swoją wiedzą i doświadczeniem dzielę się na blogu, w kursach online, e-bookach
-										oraz na webinarach. Sprawiam, że fizjoterapia jest dostępna dla każdego.
+									Maluszek podnoszony w ten sposób gwałtownie traci płaszczyznę podparcia, przez co napina się i pręży, a czasem odruchowo odrzuca rączki w tył. Takim podnoszeniem niepotrzebnie stymulujesz odruch Moro.
 									</p>
 								</div>
 							</div>

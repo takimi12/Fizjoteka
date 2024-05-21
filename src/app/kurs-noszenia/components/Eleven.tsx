@@ -69,8 +69,15 @@ const productsData = [
 const Nine = () => {
 	return (
 		<>
-			<section className={`flex justify-center ${styles.asked}`}>
-				<div className={` Container flex gap-10 `}>
+			<section className={`flex justify-center ${styles.Eleven}`}>
+				<div className={` Container flex flex-col `}>
+				<div className={` text-center mb-10`}>
+					<div className={`${styles.top}`}>
+						<h4>Znajdź produkt odpowiedni dla Ciebie</h4>
+						<p>Uzyskując nieograniczony dostęp do filmów, masz szansę nadrobić webinary w wygodnym dla siebie momencie.</p>
+						</div>
+						</div>
+					<div className={`  flex gap-10 `}>
 					{productsData.map((product, index) => (
 						<div className={` flex  w-full flex-col ${styles.singleBox}`}>
 							<span className={` ${styles.available}`}> {product.available}</span>
@@ -80,7 +87,7 @@ const Nine = () => {
 							</div>
 							<div className={` ${styles.title}`}>
 								<Link href="#" className={styles.anchor}>
-									<h4>{product.name}</h4>
+									<h4 className={`${styles.title}`}>{product.name}</h4>
 								</Link>
 								<p className={` ${styles.subtitle}`}>{product.subtitle}</p>
 							</div>
@@ -90,19 +97,20 @@ const Nine = () => {
 										<li className={` ${styles.list}`}>{item}</li>
 									))}
 								</ul>
-								<div className={` mt-20 flex justify-center gap-10`}>
+								<div className={`mt-4 flex justify-center gap-10`}>
 									<Image src={product.online} width={15} height={15} alt={circle} />{" "}
-									<p>{product.available}</p>
+									<p className={` ${styles.availableprize}`}>{product.available}</p>
 								</div>
-								<div className="mt-10 flex items-center justify-center gap-10">
+								<div className={`mt-10 flex items-center justify-center gap-10`}>
 									<p>{product.price}</p>{" "}
 									<Link href="/">
-										<button className="Button_button__6pObN">Zobacz ofertę</button>
+										<button className="">Zobacz ofertę</button>
 									</Link>
 								</div>
 							</div>
 						</div>
 					))}
+					</div>
 				</div>
 			</section>
 		</>

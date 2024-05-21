@@ -33,9 +33,9 @@ async function Nine() {
 						<h2>Co mogę zagwarantować?</h2>
 						<p>Przede wszystkim staniesz się bardziej świadomym i spokojniejszym rodzicem. </p>
 					</div>
-					<div className={` itemWraper`}>
+					<div className={` ${styles.itemWraper}`}>
 						{data.map((item, index) => (
-							<div key={index} className={` bottomItem`}>
+							<div key={index} className={` ${styles.bottomItem}`}>
 								<div className={`iconBox`}>
 									<Image width={25} height={25} src={item.image} alt="photo" />
 								</div>

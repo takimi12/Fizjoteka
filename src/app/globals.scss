@@ -3,6 +3,8 @@
 @tailwind utilities;
 
 :root {
+
+
 	--h1-color: #1b2832;
 	--h2-color: #24333e;
 	--h3-color: #2c3d49;
@@ -93,8 +95,40 @@
 	--icon-checkbox: url("../../public//assets/global/iconCheckbox.svg");
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+	font-family: --font-primary;
+}
+h1{
+	font-size: 38px;
+}
+
+h2{
+	font-size: 34px;
+}
+h3{
+	font-size: 18px;
+}
+h5{
+	font-size: 22px;
+}
+h6{
+	font-size: 16px;
+}
+
+
+
+label, a {
+	font-size: 16px;
+}
+p{
+	font-weight: 300;
+}
+
+
+
 section {
-	margin: 50px 0px;
+	padding: 50px 0px;
 }
 
 button {
@@ -156,20 +190,6 @@ button:hover {
 	line-height: 28px;
 	color: #eba37a;
 	font-weight: 600;
-}
-
-.itemWraper {
-	display: flex;
-	width: 100%;
-	gap: 30px;
-	.bottomItem {
-		background-color: #f5f6f5;
-		width: 100%;
-		padding: 25px;
-		display: flex;
-		flex-direction: column;
-		gap: 30px;
-	}
 }
 
 .iconBox {

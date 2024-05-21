@@ -3,11 +3,12 @@ import styles from "./blog.module.scss";
 import Breadcrumbs from "@/components/breadcrumbs/page";
 import etiquette from "../../../public/assets/Blog/etiquette.svg";
 import calendar from "../../../public/assets/Blog/calendar.svg";
-
+import BigFoto from "../../../public/assets/Blog/nauka-chodzenia.webp";
 function Hero() {
 	const data = [
 		{
 			temat: "Prowadzenie dziecka za rączki",
+			BigFoto: BigFoto,
 			title: etiquette,
 			tagi: ["Pierwszy rok życia", "Zdrowie dziecka", "niemowlak", "rozwojdziecka"],
 			calendar: calendar,
@@ -18,7 +19,7 @@ function Hero() {
 			temat: "Noszenie w pionie niemowlaka",
 			title: etiquette,
 			tagi: ["Pierwszy rok życia", "Zdrowie dziecka", "niemowlak", "rozwojdziecka"],
-
+			BigFoto: BigFoto,
 			calendar: calendar,
 			data: "28/09/2023",
 			status: "CZYTAM",
@@ -28,13 +29,20 @@ function Hero() {
 	return (
 		<>
 			<Breadcrumbs />
-			<section className={`{styles.blog} flex justify-center`}>
+			<section className={` ${styles.blog} flex justify-center`}>
 				<div className="Container">
 					<h1 className={`${styles.mainHeading}`}>Rozwój dziecka okiem fizjoterapeuty</h1>
 					<div className={`${styles.blocs} flex  justify-between	gap-10`}>
+
 						{data.map((blog, index) => (
+							<div>
+							<div>
+								<Image src={blog.BigFoto} alt="Blog Title" />
+							</div>
+					
 							<div key={index} className={` ${styles.singlePost}`}>
-								<div className={styles.top}>
+								
+								<div className={`{styles.top}`}>
 									<h3>{blog.temat}</h3>
 								</div>
 								<div className={` ${styles.bottom} flex  flex-col`}>
@@ -44,7 +52,7 @@ function Hero() {
 									</div>
 									<div className={`${styles.etiquette} callendar flex gap-2`}>
 										<Image width={15} height={15} src={blog.calendar} alt="Calendar Icon" />
-										<ul className={`flex `}>
+										<ul className={`flex ${styles.ul} `}>
 											{blog.tagi.map((tag, index) => (
 												<li key={index}>{tag}, </li>
 											))}
@@ -52,8 +60,9 @@ function Hero() {
 									</div>
 								</div>
 							</div>
+</div>
 						))}
-					</div>
+													</div>
 				</div>
 			</section>
 		</>

@@ -11,8 +11,8 @@ import check from "../../../public/assets/Footer/Checkin.svg";
 const Footer = () => {
 	return (
 		<>
-			<section className={` ${styles.newsletter} flex flex-col items-center`}>
-				<div className="Container flex justify-center">
+			<div className={` ${styles.newsletter} flex flex-col items-center`}>
+				<div className={`Container flex justify-center`}>
 					<h2>Nadal masz wątpliwości?</h2>
 				</div>
 
@@ -20,7 +20,7 @@ const Footer = () => {
 					<div className={`${styles.left} flex flex-col `}>
 						<div className={`${styles.top} flex items-center gap-3`}>
 							<Image src={check} width={50} height={50} alt="logo" />
-							<h4>Wszystkie produkty objęte są gwarancją jakości.</h4>
+							<h3>Wszystkie produkty objęte są gwarancją jakości.</h3>
 						</div>
 						<div className={`${styles.bottom} flex flex-col`}>
 							<p>Jestem pewna jakości opracowanych przeze mnie materiałów.</p>
@@ -40,15 +40,15 @@ const Footer = () => {
 					</div>
 					<div className={`${styles.right}`}>
 						<div className={`${styles.form} flex flex-col gap-3`}>
-							<b>
+							<p>
 								Zapisz się na newsletter a otrzymasz w prezencie kalendarz rozwoju dziecka w
 								pierwszym roku życia
-							</b>
-							<form className="Form_form__R_hA7">
+							</p>
+							<form >
 								<div>
-									<div className={styles.inputWraper}>
+									<div className={` ${styles.inputWraper}`}>
 										<fieldset>
-											<label className="" htmlFor="FirstName">
+											<label htmlFor="FirstName">
 												Imię{" "}
 												<input
 													className={styles.input}
@@ -62,12 +62,12 @@ const Footer = () => {
 											</label>
 										</fieldset>
 									</div>
-									<div className={styles.inputWraper}>
+									<div className={`${styles.inputWraper}`}>
 										<fieldset>
 											<label className="" htmlFor="Email">
 												Adres email{" "}
 												<input
-													className={styles.input}
+													className={` ${styles.input}`}
 													type="email"
 													required
 													name="Email"
@@ -78,24 +78,24 @@ const Footer = () => {
 											</label>
 										</fieldset>
 									</div>
-									<div className={styles.inputWraper}>
+									<div className={` ${styles.inputWraper}`}>
 										<fieldset>
 											<label htmlFor="AcceptRegulations">
 												<input
-													className={styles.accept}
+													className={` ${styles.accept}`}
 													required
 													type="checkbox"
 													name="AcceptRegulations"
 													id="AcceptRegulations"
 												/>
-												<span>
+												<span className={` ${styles.acceptSpan}`}>
 													Wyrażam zgodę na wysyłanie maili. W każdym momencie mogę wypisać się z
 													listy mailingowej.
 												</span>
 											</label>
 										</fieldset>
 									</div>
-									<button aria-busy="false" className="Button_button__6pObN">
+									<button aria-busy="false" >
 										CHCĘ OTRZYMAĆ KALENDARZ
 									</button>
 								</div>
@@ -103,9 +103,9 @@ const Footer = () => {
 						</div>
 					</div>
 				</div>
-			</section>
+			</div>
 
-			<footer className={styles.footer}>
+			<footer className={` ${styles.footer}`}>
 				<div className={` ${styles.container} Container`}>
 					<div className={` flex flex-col justify-center`}>
 						<span>mgr Magdalena Adaś</span>

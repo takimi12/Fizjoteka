@@ -9,10 +9,10 @@ async function Third() {
 			<section className={`${styles.Ebook} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
 					<div className={`${styles.topSection} flex flex-col items-center`}>
-						<h2>Chcę, żeby każdy rodzic wiedział, jak prawidłowo nosić i podnosić swoje dziecko</h2>
+						<h2 className={` text-center`}>Chcę, żeby każdy rodzic wiedział, jak prawidłowo nosić i podnosić swoje dziecko</h2>
 					</div>
-					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className="Inner flex items-center">
+					<div className={`${styles.bottomSection} flex  items-center mt-10`}>
+						<div className={`Inner flex items-center`}>
 							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
 								<div className={`${styles.text} flex flex-col gap-3`}>
 									<h6>Podnoszenie i odkładanie noworodka</h6>

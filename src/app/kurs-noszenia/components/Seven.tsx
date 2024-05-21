@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Photo from "../../../../public/assets/HomePage/Fizquizz/fizquiz.webp";
-import styles from "./Five.module.scss";
+import styles from "./Seven.module.scss";
 import Link from "next/link";
 
 async function Seven() {
@@ -8,11 +8,11 @@ async function Seven() {
 		<>
 			<section className={`${styles.Ebook} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
-					<div className={`${styles.topSection} flex flex-col items-center`}>
-						<h2>Cześć!</h2>
-						<p>Nazywam sie Magdalena Adas</p>
+					<div className={`${styles.topSection} flex flex-col items-center `}>
+						<h2>Jak konkretnie mogę Ci pomóc?</h2>
+						<h3>Przygotowałam zestaw filmów o noszeniu i opiece nad niemowlakiem</h3>
 					</div>
-					<div className={`${styles.bottomSection} flex  items-center`}>
+					<div className={`${styles.bottomSection} flex  items-center mt-20`}>
 						<div className="Inner flex w-full items-center gap-10">
 							<div className={`${styles.leftSection} w-full`}>
 								<div className={`${styles.image} flex justify-center`}>

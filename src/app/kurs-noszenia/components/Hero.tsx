@@ -8,15 +8,15 @@ function Hero() {
 	return (
 		<>
 			<Breadcrumbs />
-			<section className={`${styles.Ebook} d-flex flex-center`}>
+			<section className={`${styles.Hero} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
 					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className="Inner flex items-center">
+						<div className={` ${styles.Inner} flex items-center`}>
 							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
 								<div className={`${styles.text} flex flex-col gap-3`}>
 									<h2>Noszenie i pielęgnacja maluszka</h2>
 
-									<p>Kurs dla rodzica • Nagrania wideo • Spotkanie online</p>
+									<p className={` ${styles.paragraph}`}>Kurs dla rodzica • Nagrania wideo • Spotkanie online</p>
 									<p>
 										Pigułka wiedzy medycznej i doświadczenia pracy z małymi pacjentami. Nauczysz
 										się, jak dbać o twoje maleństwo bez stresu i wychodzenia z domu.
@@ -25,13 +25,13 @@ function Hero() {
 								<div className={`flex gap-7`}>
 									<div className={`${styles.button}`}>
 										<Link href="/filmy-i-ebooki/asymetria-ulozeniowa">
-											<button className="secondaryButton">Czytaj więcej</button>
+											<button className={`secondaryButton`}>Czytaj więcej</button>
 										</Link>
 									</div>
 
 									<div className={`${styles.button}`}>
 										<Link href="/filmy-i-ebooki/asymetria-ulozeniowa">
-											<button className="Button_button__6pObN">Zobacz ofertę</button>
+											<button className={`Button_button__6pObN`}>Zobacz ofertę</button>
 										</Link>
 									</div>
 								</div>

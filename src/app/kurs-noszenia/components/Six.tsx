@@ -15,11 +15,9 @@ async function Six() {
 						<div className="Inner flex items-center">
 							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
 								<div className={`${styles.text} flex flex-col gap-3`}>
-									<h6>Podnoszenie i odkładanie noworodka</h6>
-
+					
 									<p>
-										Prawidłowy sposób podnoszenia to taki, w którym maluszek wykaże aktywność,
-										dzięki czemu część pracy wykona za nas.
+									Prawidłowy sposób podnoszenia to taki, w którym maluszek wykaże aktywność, dzięki czemu część pracy wykona za nas.
 									</p>
 									<p>
 										Podnoszenie noworodka różni się od podnoszenia dziecka, które kontroluje już

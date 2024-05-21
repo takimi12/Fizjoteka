@@ -16,7 +16,7 @@ const products = [
 		text: "Dowiesz się: 👉 Jak bawić się z maluszkiem, by budować więź między wami. 👉Jak sprawdzić, czy prawidłowo leży na brzuszku? 👉 Jakie ćwiczenia można wprowadzać w danym wieku.👉 Jak stymulować zmysły dziecka? 👉 Jakie sprzęty warto kupić dla dziecka? Kiedy? 👉Czwartek: 23/5/2024r. godz.: 19:00 ❤️ Webinar będzie na żywo na platformie ZOOM. Oczywiście będzie zapisany i po zakupie możesz odtwarzać ponownie. ❤️ ALE dołącz na żywo - wtedy możesz zadać pytania i dowiedzieć się jeszcze więcej! ❤️ Ilość miejsc jest ograniczona do 30, dlatego spiesz się, zanim zabraknie wirtualnych krzesełek ;)",
 		available: "Produkt dostępny",
 		circle: Circle,
-		price: 50.0,
+		price: "50.00",
 		categories: ["Webinar"],
 	},
 	{
@@ -27,7 +27,7 @@ const products = [
 		text: "Dowiesz się: 👉 Czym jest asymetria ułożeniowa? 👉 Jakie są jej objawy? 👉 Jak postępować, aby ją skorygować? 👉 Jakie ćwiczenia wykonywać z dzieckiem? Kiedy? 👉Piątek: 24/5/2024r. godz.: 19:00 ❤️ Webinar będzie na żywo na platformie ZOOM. Oczywiście będzie zapisany i po zakupie możesz odtwarzać ponownie. ❤️ Dołącz na żywo - wtedy możesz zadać pytania i dowiedzieć się jeszcze więcej! ❤️ Ilość miejsc jest ograniczona do 30.",
 		available: "Produkt dostępny",
 		circle: Circle,
-		price: 40.0,
+		price: "40.00",
 		categories: ["Asymetria ułożeniowa"],
 	},
 	{
@@ -38,7 +38,7 @@ const products = [
 		text: "Dowiesz się: 👉 Jak prawidłowo nosić dziecko? 👉 Jakie są najlepsze techniki noszenia? 👉 Jakie korzyści płyną z noszenia dziecka? 👉 Jakie błędy unikać podczas noszenia? ❤️ Ebook jest dostępny do natychmiastowego pobrania po zakupie. Możesz go czytać w dowolnym momencie.",
 		available: "Produkt dostępny",
 		circle: Circle,
-		price: 30.0,
+		price: "30.00",
 		categories: ["Poradnik"],
 	},
 	{
@@ -49,7 +49,7 @@ const products = [
 		text: "Dowiesz się: 👉 Jak wspierać rozwój dziecka w różnych etapach życia? 👉 Jakie zabawy i aktywności są najlepsze dla danego wieku? 👉 Jakie są kluczowe aspekty zdrowia i bezpieczeństwa dziecka? ❤️ Poradnik jest dostępny do natychmiastowego pobrania po zakupie. Możesz go czytać w dowolnym momencie.",
 		available: "Produkt dostępny",
 		circle: Circle,
-		price: 25.0,
+		price: "25.00",
 		categories: ["Rozwój dziecka"],
 	},
 	{
@@ -60,7 +60,7 @@ const products = [
 		text: "Dowiesz się: 👉 Jak prawidłowo nosić dziecko? 👉 Jakie są najlepsze techniki noszenia? 👉 Jakie są korzyści z noszenia dziecka? 👉 Jak unikać błędów podczas noszenia? Kiedy? 👉Sobota: 25/5/2024r. godz.: 19:00 ❤️ Webinar będzie na żywo na platformie ZOOM. Oczywiście będzie zapisany i po zakupie możesz odtwarzać ponownie. ❤️ Dołącz na żywo - wtedy możesz zadać pytania i dowiedzieć się jeszcze więcej! ❤️ Ilość miejsc jest ograniczona do 30.",
 		available: "Produkt dostępny",
 		circle: Circle,
-		price: 35.0,
+		price: "35.00",
 		categories: ["Nauka noszenia"],
 	},
 ];
@@ -69,7 +69,7 @@ function Hero() {
 	const [selectedCategories, setSelectedCategories] = useState([]);
 	const [filteredProducts, setFilteredProducts] = useState(products);
 
-	const handleCategoryChange = (category: string) => {
+	const handleCategoryChange = (category: any) => {
 		const updatedCategories = selectedCategories.includes(category)
 			? selectedCategories.filter((cat) => cat !== category)
 			: [...selectedCategories, category];
@@ -102,7 +102,8 @@ function Hero() {
 		<>
 			<Breadcrumbs />
 			<section className={`${styles.blog} flex justify-center`}>
-				<div className="Container flex">
+				<div className={`Container flex`}>
+					<div>
 					<div className={` ${styles.filters}`}>
 						<h6>Kategoria</h6>
 						{[
@@ -112,9 +113,9 @@ function Hero() {
 							"Webinar",
 							"Poradnik",
 						].map((category, index) => (
-							<div key={index} className="Input_inputContainer__yhKKv">
+							<div key={index} className={` mb-7 ${styles.inputs}`} >
 								<fieldset>
-									<label className="Input_checkbox__ZAWb5" htmlFor={category}>
+									<label className="" htmlFor={category}>
 										<input
 											type="checkbox"
 											id={category}
@@ -127,7 +128,7 @@ function Hero() {
 								</fieldset>
 							</div>
 						))}
-						<div className="Filters_buttons__AhC0k">
+						<div className="">
 							<button className={`Button ${styles.buttonLeft} `} onClick={filterProducts}>
 								Wyszukaj
 							</button>
@@ -136,11 +137,12 @@ function Hero() {
 							</button>
 						</div>
 					</div>
+					</div>
 					<div>
-						<div className="Listing_listingHeading__yO1wJ">
-							<div className={` text-center`}>
-								<h4>Znajdź produkt odpowiedni dla Ciebie</h4>
-								<p>
+						<div className="">
+							<div className={` text-center ${styles.mainSection}`}>
+									<h3>Znajdź produkt odpowiedni dla Ciebie</h3>
+									<p>
 									Uzyskując nieograniczony dostęp do filmów, masz szansę nadrobić webinary w
 									wygodnym dla siebie momencie.
 								</p>
@@ -169,7 +171,7 @@ function Hero() {
 											<p>{product.available}</p>
 										</div>
 										<div className={`${styles.priceParent} flex items-center justify-end`}>
-											<p className={` ${styles.amount}`}> {product.price} zł</p>
+											<p className={` ${styles.amount} font-bold`}> {product.price} zł</p>
 											<button className={`Button ${styles.button} `} onClick={filterProducts}>
 												Dodaj do koszyka
 											</button>

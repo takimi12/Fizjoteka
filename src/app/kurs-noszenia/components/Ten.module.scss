@@ -28,6 +28,15 @@
 			align-items: center;
 			gap: 20px;
 			text-align: center;
+			h4{
+				font-size: 18px;
+				font-weight: 600;
+				line-height: 28px;
+				white-space: pre-wrap;
+				text-align: center;
+				margin-top: 20px;			
+				color: var(--primary);
+			}
 		}
 	}
 }

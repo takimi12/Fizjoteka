@@ -4,7 +4,16 @@
 	padding: 15px;
 	background-color: #f5f6f5;
 	border-radius: 5px;
-	max-height: 300px;
+	max-height: 500px;
+	h6 {
+		font-size: 25px;
+		margin-bottom: 15px;
+	}
+	.inputs{
+		span{
+			font-size: 14px;
+		}
+	}
 }
 
 .buttonLeft {
@@ -57,6 +66,7 @@
 	margin-bottom: 20px;
 	.anchor {
 		line-height: 24px;
+		font-size: 25px;
 		color: #255a6b;
 		text-decoration: underline;
 		text-decoration-color: rgba(37, 90, 107, 0.4);
@@ -92,4 +102,16 @@
 	margin-right: 5px;
 	border: solid 2px #a2afb9;
 	border-radius: 5px;
+}
+
+
+.mainSection {
+	h3{
+		font-size: 25px;
+		margin-bottom: 20px;
+	}
+	p{
+		font-weight: 400;
+		margin-bottom: 30px;
+	}
 }

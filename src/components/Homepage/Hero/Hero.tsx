@@ -4,20 +4,23 @@ import styles from "./Hero.module.scss";
 
 function Hero() {
 	return (
-		<section className={styles.Hero}>
-			<div className="Container">
-				<div className={styles.Inner}>
-					<div className={styles.leftSection}>
-						<div className={styles.title}>
+		<section className={`${styles.Hero}`}>
+			<div className={`Container`}>
+				<div className={` ${styles.Inner}`}>
+					<div className={` ${styles.leftSection}`}>
+						<div className={`${styles.title}`}>
 							<h1 className={` ${styles.main}`}>Cześć, jestem Magda!</h1>
 						</div>
-						<p className={styles.paragraph}>
+						<p className={`${styles.paragraph} my-5`}>
 							Jestem fizjoterapeutką dziecięcą i edukatorką. E-fizjoteka to moje miejsce w sieci.
+						</p>
+						<p className={`${styles.paragraph}`}>
+
 							Dzielę się tu wiedzą fizjoterapeutyczną i uczę rodziców prawidłowej pielęgnacji dzieci
 							oraz metod wspierania ich zdrowego rozwoju.
 						</p>
 					</div>
-					<div className={styles.rightSection}>
+					<div className={` ${styles.rightSection}`}>
 						<Image
 							src={Photo}
 							width={408}

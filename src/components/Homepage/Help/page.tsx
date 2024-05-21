@@ -8,6 +8,8 @@ async function Hero() {
 			title: "Blog",
 			paragraph:
 				"Koniecznie zajrzyj do zakładki Blog. Każdego miesiąca szuka na nim porady ponad 50 tys. osób. To najchętniej czytany blog o tej tematyce!",
+			paragraphbold:
+				" To najchętniej czytany blog o tej tematyce!",
 			link: "blog",
 		},
 		{
@@ -30,15 +32,18 @@ async function Hero() {
 				<div className={`Container`}>
 					<div className={`${styles.topSection}`}>
 						<h2>Jak mogę Ci pomóc?</h2>
-						<p>
+						<p className={` mb-5`}>
 							Na e-fizjotece znajdziesz artykuły oraz filmy i e-booki z poradami fizjoterapeuty.
 						</p>
 					</div>
-					<div className={`itemWraper`}>
+					<div className={` ${styles.itemWraper}`}>
 						{data.map((item, index) => (
-							<div key={index} className={`bottomItem`}>
-								<h3>{item.title}</h3>
+							<div key={index} className={`${styles.bottomItem}`}>
+								<h4>{item.title}</h4>
+								<div className={` ${styles.longText}`}>
 								<p>{item.paragraph}</p>
+								{item.paragraphbold && <p className={`font-bold`}>{item.paragraphbold}</p>}
+								</div>
 								<Button link={item.link} link1="" />
 							</div>
 						))}

@@ -28,7 +28,8 @@ const Nine = () => {
 	return (
 		<>
 			<section className={` flex justify-center ${styles.asked}`}>
-				<div className={` bubleWraper relative`}>
+				<div className={` bubleWraper absolute left-0`}>
+					<div className={` bubleWraper relative z-0`}>
 					<Image
 						className={`${styles.buble1} relative`}
 						src={Buble1}
@@ -36,6 +37,8 @@ const Nine = () => {
 						width={125}
 						height={125}
 					/>
+					</div>
+					<div className={` bubleWraper relative z-0`}>
 					<Image
 						className={`${styles.buble2} relative`}
 						src={Buble2}
@@ -43,6 +46,8 @@ const Nine = () => {
 						width={125}
 						height={125}
 					/>
+					</div>
+					<div className={` bubleWraper relative z-0`}>
 					<Image
 						className={`${styles.buble3} relative`}
 						src={Buble3}
@@ -50,9 +55,10 @@ const Nine = () => {
 						width={125}
 						height={125}
 					/>
+					</div>
 				</div>
 				<div className={` Container`}>
-					<h2 className={` text-center`}>Znajdziesz odpowiedzi na najczęstsze pytania rodziców</h2>
+					<h2 className={` text-center mb-4`}>Znajdziesz odpowiedzi na najczęstsze pytania rodziców</h2>
 					<div className={` ${styles.wraper}`}>
 						{data.map((item, index) => (
 							<div className={` ${styles.single}`} key={index}>

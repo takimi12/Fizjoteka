@@ -8,12 +8,12 @@ import Link from "next/link";
 async function Eight() {
 	return (
 		<>
-			<section className={`${styles.Ebook} d-flex flex-center`}>
+			<section className={`${styles.Eight} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
-					<div className="Opinions_trustHeading__PGfUy text-center">
+					<div className={` text-center `}>
 						<h2>Dlaczego możesz mi zaufać?</h2>
 						<h3>Są ze mną już tysiące rodziców</h3>
-						<div className={` ${styles.blockParent} flex gap-10`}>
+						<div className={` ${styles.blockParent} flex gap-10 mt-10`}>
 							<div className={` ${styles.inner} w-full`}>
 								<h5>50 TYS. +</h5>
 								<p>
@@ -34,14 +34,14 @@ async function Eight() {
 							</div>
 						</div>
 					</div>
-					<div className="Opinions_opinions-heading___EgLI">
+					<div className={` ${styles.mediumSection}`}>
 						<h3 className={`text-center`}>Opinie mam są najlepszą recenzją mojej pracy</h3>
 						<h6>
 							Dziękuję, że jesteście ❤️ To dla Was tworzę. To dzięki Waszym komentarzom mam siłę, by
 							uczyć się dalej, a później dzielić się tą wiedzą.
 						</h6>
 						<h6>5/5</h6>
-						<div className={` flex justify-center`}>
+						<div className={` flex justify-center gap-8`}>
 							<Image src={Photo} alt="Gwiazdki" width={20} height={20} />
 							<Image src={Photo} alt="Gwiazdki" width={20} height={20} />
 							<Image src={Photo} alt="Gwiazdki" width={20} height={20} />
