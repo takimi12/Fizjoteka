@@ -9,14 +9,14 @@ async function Third() {
 			<section className={`${styles.Ebook} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
 					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className="Inner flex items-center">
-							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
+						<div className={`Inner flex items-center w-full`}>
+							<div className={`${styles.leftSection}  flex w-full flex-col justify-center gap-3`}>
 								<div className={`${styles.text} flex flex-col gap-3`}>
-									<div className="SimpleSection_title__RKgMt">
-										<h3>Metody, które stosuję</h3>
+									<div className="">
+										<h2 className={` ${styles.thirdTitle}`}>Metody, które stosuję</h2>
 									</div>
 									<div>
-										<ul>
+										<ul className={` ${styles.ul}`}>
 											<li className={` ${styles.list}`}>
 												<p>FITS – Funkcjonalna Indywidualna Terapia Skolioz,</p>
 											</li>

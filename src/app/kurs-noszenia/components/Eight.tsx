@@ -8,7 +8,7 @@ import Link from "next/link";
 async function Eight() {
 	return (
 		<>
-			<section className={`${styles.Eight} d-flex flex-center`}>
+			<section className={` flex flex-center ${styles.eight}`}>
 				<div className={`Container m-auto`}>
 					<div className={` text-center `}>
 						<h2>Dlaczego możesz mi zaufać?</h2>
@@ -48,7 +48,7 @@ async function Eight() {
 							<Image src={Photo} alt="Gwiazdki" width={20} height={20} />
 							<Image src={Photo} alt="Gwiazdki" width={20} height={20} />
 						</div>
-						<Opinion />
+						<Opinion variableOpinion={false} />
 					</div>
 				</div>
 			</section>

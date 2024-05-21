@@ -5,8 +5,8 @@ async function Four() {
 		<>
 			<section className={`${styles.Four} flex justify-center`}>
 				<div className={`Container `}>
-					<div>
-						<h2>Co mnie wyróżnia?</h2>
+					<div className={` ${styles.mainWrapper}`}>
+						<h2 className={` ${styles.mainHeading}`}>Co mnie wyróżnia?</h2>
 						<ol>
 							<li>
 								1.Nie znajdziesz tu pakietu 10 wizyt. Moim celem nie jest prowadzenie Twojego

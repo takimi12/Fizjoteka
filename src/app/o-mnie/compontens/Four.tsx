@@ -1,20 +1,19 @@
 import Image from "next/image";
 import Photo from "../../../../public/assets/HomePage/Ebook/ebook_product-title.webp";
 import styles from "./Four.module.scss";
-import Arrow from "../../../../public/assets/HomePage/Help/arrow.jsx";
 import Link from "next/link";
 
 export default async function Four() {
 	return (
 		<>
-			<section className={`${styles.Ebook} d-flex flex-center`}>
+			<section className={`${styles.Four} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
 					<div className={`${styles.topSection} flex flex-col items-center`}>
 						<h2>Mój pierwszy e-book</h2>
-						<p>Asymetria ułoeniowa - poradniik dla rodzica</p>
+						<h3 className={` ${styles.lowHeading}`}>Asymetria ułoeniowa - poradniik dla rodzica</h3>
 					</div>
 					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className="Inner flex items-center">
+						<div className={`Inner flex items-center`}>
 							<div className={`${styles.leftSection} w-full`}>
 								<div className={`${styles.image} flex justify-center`}>
 									<Image src={Photo} alt="moj pierwszy ebook" width={361} height={322} />
@@ -34,7 +33,7 @@ export default async function Four() {
 								</div>
 								<div className={`${styles.button}`}>
 									<Link href="/filmy-i-ebooki/asymetria-ulozeniowa">
-										<button className="Button_button__6pObN">DOWIEDZ SIĘ WIĘCEJ</button>
+										<button className="">DOWIEDZ SIĘ WIĘCEJ</button>
 									</Link>
 								</div>
 							</div>

@@ -1,18 +1,18 @@
 import Image from "next/image";
 import Photo from "../../../../public/assets/HomePage/Fizquizz/fizquiz.webp";
-import styles from "./Five.module.scss";
-import Link from "next/link";
+import styles from "./Seven.module.scss";
+
 
 async function Six() {
 	return (
 		<>
-			<section className={`${styles.Ebook} d-flex flex-center`}>
+			<section className={`${styles.seven} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
 					<div className={`${styles.bottomSection} flex  items-center`}>
 						<div className="Inner flex items-center">
 							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
 								<div className={`${styles.text} flex flex-col gap-3`}>
-									<h6>Jak przebiega konsultacja online?</h6>
+									<h6 className={` ${styles.mainHeading}`}>Jak przebiega konsultacja online?</h6>
 
 									<div>
 										<div>

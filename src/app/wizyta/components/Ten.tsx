@@ -39,13 +39,13 @@ async function Ten() {
 		<>
 			<section className={`${styles.ten} flex justify-center`}>
 				<div className={`Container`}>
-					<h3 className={` text-center`}>Cennik</h3>
+					<h2 className={` text-center mb-5`}>Cennik</h2>
 					<div className={` ${styles.wraper}`}>
 						{consultations.map((consultation, index) => (
 							<div key={index} className={styles.consultationSingle}>
-								<h3>{consultation.type}</h3>
-								<p>{consultation.price}</p>
-								<ul className={`{styles.ul}`}>
+								<h3 className={`${styles.consulationHeading}`}>{consultation.type}</h3>
+								<p className={` ${styles.consultationPrice}`}>{consultation.price}</p>
+								<ul className={`${styles.ul}`}>
 									<li className={` font-bold`}>{consultation.time}</li>{" "}
 									{consultation.reservation && <li>{consultation.reservation}</li>}
 									{consultation.reservationbold && (

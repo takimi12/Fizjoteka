@@ -5,11 +5,11 @@ import styles from "./Hero.module.scss";
 function Hero() {
 	return (
 		<>
-			<section className={styles.Hero}>
-				<div className="Container">
-					<div className={styles.Inner}>
-						<div className={styles.leftSection}>
-							<div className={styles.title}>
+			<section className={`${styles.Hero}`}>
+				<div className={`Container`}>
+					<div className={`${styles.Inner}`}>
+						<div className={` ${styles.leftSection}`}>
+							<div className={` ${styles.title}`}>
 								<h1>Nazywam się Magdalena Adaś</h1>
 							</div>
 							<p className={`${styles.paragraph}`}>
@@ -24,7 +24,7 @@ function Hero() {
 								świecie online.
 							</p>
 						</div>
-						<div className={styles.rightSection}>
+						<div className={` ${styles.rightSection}`}>
 							<Image
 								src={Photo}
 								width={408}

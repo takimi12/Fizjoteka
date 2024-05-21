@@ -7,15 +7,15 @@ function Hero() {
 	return (
 		<>
 			<section className={`${styles.second} flex justify-center`}>
-				<div className="Container">
-					<div className="Container_container__2oJmA">
+				<div className={`Container`}>
+					<div className="">
 						<div className={`flex flex-col items-center justify-center`}>
-							<h3>Zapisz się na konsultację</h3>
+							<h3 className={` ${styles.mainHeading}`}>Zapisz się na konsultację</h3>
 							<div className={` flex gap-10`}>
 								<div className={` w-full`}>
 									<Image className={` `} src={Wizyta} alt="Newsletter" width={408} height={404} />
 								</div>
-								<div className={` d-flex w-full items-center`}>
+								<div className={` flex w-full items-center`}>
 									<div className={` flex flex-col items-center`}>
 										<Link
 											href="https://widget.zarezerwuj.pl/direct/b02f996b-e919-4357-8c78-99b006488d85"

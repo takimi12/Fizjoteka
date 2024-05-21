@@ -6,22 +6,22 @@ import Link from "next/link";
 async function Second() {
 	return (
 		<>
-			<section className={`${styles.Ebook} d-flex flex-center`}>
+			<section className={`${styles.second} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
 					<div className={`${styles.topSection} flex flex-col items-center`}>
 						<h2>Codzienna praca z pacjentami</h2>
-						<p>Specjalizuję się w fizjoterapii niemowląt oraz dzieci z wadami postawy</p>
+						<h6 className={`${styles.smaller}`}>Specjalizuję się w fizjoterapii niemowląt oraz dzieci z wadami postawy</h6>
 					</div>
 					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className="Inner flex items-center">
+						<div className={`Inner flex items-center`}>
 							<div className={`${styles.leftSection} w-full`}>
 								<div className={`${styles.image} flex justify-center`}>
 									<Image src={Photo} alt="moj pierwszy ebook" width={361} height={322} />
 								</div>
 							</div>
-							<div className={`${styles.rightSection} flex w-full flex-col items-center gap-3`}>
-								<div className="font-bold">
-									<h3>Kraków i Warszawa</h3>
+							<div className={`${styles.rightSection} flex w-full flex-col  gap-3`}>
+								<div className={`font-bold`}>
+									<h3 className={` ${styles.smallerTitle}`}>Kraków i Warszawa</h3>
 								</div>
 								<div className={`${styles.text} flex flex-col gap-3`}>
 									<p>

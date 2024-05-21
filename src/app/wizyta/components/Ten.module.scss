@@ -12,6 +12,16 @@
 	background: #fff;
 	border-radius: 10px;
 	border: 1px solid #f5c077;
+	.consulationHeading{
+		margin: 0;
+		text-align: center;
+		color: #255a6b;
+		font-size: 24px;
+	}
+	.consultationPrice{
+		font-size: 18px;
+		font-weight: 700;
+	}
 }
 .wraper {
 	column-gap: 24px;
@@ -20,6 +30,10 @@
 	display: grid;
 }
 
-.ul li {
+.ul {
+	margin-left: 40px;
+	min-height: 170px;
+li {
 	list-style-type: disc;
+}
 }

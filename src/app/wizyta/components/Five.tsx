@@ -3,16 +3,16 @@ import Photo from "../../../../public/assets/HomePage/Fizquizz/fizquiz.webp";
 import styles from "./Five.module.scss";
 import Link from "next/link";
 
-async function Third() {
+async function Five() {
 	return (
 		<>
 			<section className={`${styles.Ebook} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
 					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className="Inner flex items-center">
+						<div className={`Inner flex items-center`}>
 							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
 								<div className={`${styles.text} flex flex-col gap-3`}>
-									<h6>Metody, które stosuję</h6>
+									<h6 className={`${styles.mainHeading}`}>Metody, które stosuję</h6>
 
 									<div>
 										<ul>
@@ -54,4 +54,4 @@ async function Third() {
 	);
 }
 
-export default Third;
+export default Five;

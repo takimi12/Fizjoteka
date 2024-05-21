@@ -99,10 +99,10 @@ const Nine = () => {
 								</ul>
 								<div className={`mt-4 flex justify-center gap-10`}>
 									<Image src={product.online} width={15} height={15} alt={circle} />{" "}
-									<p className={` ${styles.availableprize}`}>{product.available}</p>
+									<p className={` ${styles.availableprize} font-normal`}>{product.available}</p>
 								</div>
-								<div className={`mt-10 flex items-center justify-center gap-10`}>
-									<p>{product.price}</p>{" "}
+								<div className={`mt-10 flex items-center justify-center gap-5`}>
+									<p className={` font-bold`}>{product.price}</p>{" "}
 									<Link href="/">
 										<button className="">Zobacz ofertę</button>
 									</Link>

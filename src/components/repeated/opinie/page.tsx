@@ -3,12 +3,12 @@ import Chat from "../../../../public/assets/Kurs-Noszenia/chat.svg";
 import styles from "./opinie.module.scss";
 import Link from "next/link";
 
-async function Opinion() {
+async function Opinion({variableOpinion}: {variableOpinion: boolean}) {
 	return (
 		<>
 			<section className={`${styles.Ebook} d-flex flex-center`}>
 				<div className={`${styles.wraperOpinion}`}>
-					<div className={` ${styles.opinion}`}>
+					<div className={`${variableOpinion ? styles.grey : styles.opinion}`}>
 						<span>
 							Korzystałam z pomocy Pani Magdy, przyjechała do nas na wizytę domową. Obserwowała
 							synka podczas aktywności i zabawy w jego codziennym środowisku. Przekazała nam cenne
@@ -16,7 +16,7 @@ async function Opinion() {
 						</span>
 						<h6 className={` sign`}>Paula K.</h6>
 					</div>
-					<div className={` ${styles.opinion}`}>
+					<div className={`${variableOpinion ? styles.grey : styles.opinion}`}>
 						<span>
 							Pani Magdą to bardzo ciepła i miła osoba 😉 To szczególnie ważne przy małych
 							dzieciach. Wszystko dobrze tłumaczy i nie 'straszy' niepotrzebnie. gorąco polecam do
@@ -24,7 +24,7 @@ async function Opinion() {
 						</span>
 						<h6 className={` sign`}>Dorota B.</h6>
 					</div>
-					<div className={` ${styles.opinion}`}>
+					<div className={`${variableOpinion ? styles.grey : styles.opinion}`}>
 						<span>
 							Pani Magda profesjonalnie i z dużym zaangażowaniem podeszła do moich córek oraz
 							wykonywanych przez nią zabiegów fizjoterapeutycznych. Poleciła nam dodatkowe ćwiczenia
@@ -32,7 +32,7 @@ async function Opinion() {
 						</span>
 						<h6 className={` sign`}>Marta S.</h6>
 					</div>
-					<div className={` ${styles.opinion}`}>
+					<div className={`${variableOpinion ? styles.grey : styles.opinion}`}>
 						<span>
 							Profesjonalizm, punktualność i wiedza!!! Wizyty domowe są ułatwieniem dla mam i
 							maluszków. Ponadto dobry kontakt na fb, można o wszystko zapytać. Pani Magda ma
@@ -41,7 +41,7 @@ async function Opinion() {
 						</span>
 						<h6 className={` sign`}>Sylwia Sz.</h6>
 					</div>
-					<div className={` ${styles.opinion}`}>
+					<div className={`${variableOpinion ? styles.grey : styles.opinion}`}>
 						<span>
 							Mieszkam za granicą i napotkałam problemy z dostępem do fizjoterapii dziecięcej w
 							sprawie, która mnie niepokoiła. Mówiono mi, że niektóre dzieci 'takie są'.
