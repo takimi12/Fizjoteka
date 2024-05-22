@@ -43,7 +43,7 @@ async function Contact() {
 				<div className={`Container`}>
 					<div className={`${styles.topSection}`}>
 						<h2 className={` ${styles.title}`}>Bądźmy w kontakcie!</h2>
-						<p>Dołącz do moich kanałów i bądź na bieżąco z poradami fizjoterapeuty.</p>
+						<h3 className={` ${styles.subtitle}`}>Dołącz do moich kanałów i bądź na bieżąco z poradami fizjoterapeuty.</h3>
 					</div>
 					<div className={` ${styles.itemWraper}`}>
 						{data.map((item, index) => (

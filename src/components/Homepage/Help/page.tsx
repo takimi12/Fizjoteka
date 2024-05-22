@@ -44,7 +44,7 @@ async function Hero() {
 								<p>{item.paragraph}</p>
 								{item.paragraphbold && <p className={`font-bold`}>{item.paragraphbold}</p>}
 								</div>
-								<Button link={item.link} link1="" />
+								<Button  link={item.link} link1="" />
 							</div>
 						))}
 					</div>

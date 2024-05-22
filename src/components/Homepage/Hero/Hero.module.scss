@@ -7,6 +7,16 @@
 		grid-column-gap: 50px;
 		grid-template-areas: "c c";
 		grid-template-columns: 1fr 1fr;
+		@media (max-width: 900px) {
+			display: grid;
+			grid-template-columns: 1fr;
+			grid-template-rows: 1fr;
+			grid-gap: 29px;
+			gap: 29px;
+			grid-template-areas:
+				"c"
+				"b";
+		}
 		.leftSection {
 			display: flex;
 			align-items: start;

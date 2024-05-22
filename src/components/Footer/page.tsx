@@ -12,11 +12,11 @@ const Footer = () => {
 	return (
 		<>
 			<div className={` ${styles.newsletter} flex flex-col items-center`}>
-				<div className={`Container flex justify-center`}>
-					<h2>Nadal masz wątpliwości?</h2>
+				<div className={`Container ${styles.newsletterContainer}`}>
+					<h2 className={` ${styles.mainHeading}`}>Nadal masz wątpliwości?</h2>
 				</div>
 
-				<div className={` ${styles.container} Container flex justify-between`}>
+				<div className={` ${styles.container} Container `}>
 					<div className={`${styles.left} flex flex-col `}>
 						<div className={`${styles.top} flex items-center gap-3`}>
 							<Image src={check} width={50} height={50} alt="logo" />
@@ -116,7 +116,7 @@ const Footer = () => {
 						<Link href="">Regulamin sklepu</Link>
 					</div>
 
-					<div className={`${styles.icons} flex flex-row items-center justify-center  gap-10`}>
+					<div className={`${styles.icons}  `}>
 						<Link href="/login">
 							<Image src={login} width={25} height={25} alt="login" />
 						</Link>

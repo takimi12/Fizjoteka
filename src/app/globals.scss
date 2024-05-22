@@ -101,6 +101,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1{
 	font-size: 38px;
+	@media only screen and (max-width: 900px) {
+	font-size: 28px;
+	}
 }
 
 h2{
@@ -168,6 +171,14 @@ button:hover {
 	overflow: hidden;
 	@media only screen and (min-width: 1200px) {
 		max-width: 1200px;
+	}
+	@media only screen and (max-width: 1200px) {
+		max-width: 900px;
+		margin: auto;
+	}
+	@media only screen and (max-width: 900px) {
+		max-width: 600px;
+		margin: auto;
 	}
 }
 

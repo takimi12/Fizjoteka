@@ -7,4 +7,18 @@
         font-size: 16px;
         
     }
+    .bottomSection{
+        display: flex;
+        @media screen and (max-width: 900px){
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            grid-gap: 29px;
+            gap: 29px;
+            grid-template-areas:
+                "c"
+                "b";
+                margin-top: 50px;
+        }
+    }
 }

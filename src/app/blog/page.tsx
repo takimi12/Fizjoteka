@@ -32,7 +32,7 @@ function Hero() {
 			<section className={` ${styles.blog} flex justify-center`}>
 				<div className="Container">
 					<h1 className={`${styles.mainHeading}`}>Rozwój dziecka okiem fizjoterapeuty</h1>
-					<div className={`${styles.blocs} flex  justify-between	gap-10`}>
+					<div className={`${styles.blocs} `}>
 
 						{data.map((blog, index) => (
 							<div>
@@ -42,7 +42,7 @@ function Hero() {
 					
 							<div key={index} className={` ${styles.singlePost}`}>
 								
-								<div className={`{styles.top}`}>
+								<div className={` ${styles.top}`}>
 									<h3>{blog.temat}</h3>
 								</div>
 								<div className={` ${styles.bottom} flex  flex-col`}>

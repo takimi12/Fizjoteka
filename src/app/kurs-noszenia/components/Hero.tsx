@@ -8,12 +8,12 @@ function Hero() {
 	return (
 		<>
 			<Breadcrumbs />
-			<section className={`${styles.Hero} d-flex flex-center`}>
+			<section className={`${styles.Hero} d-flex `}>
 				<div className={`Container m-auto`}>
-					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className={` ${styles.Inner} flex items-center`}>
-							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
-								<div className={`${styles.text} flex flex-col gap-3`}>
+					<div className={`${styles.bottomSection} flex  `}>
+						<div className={` ${styles.Inner} flex `}>
+							<div className={`${styles.leftSection} flex w-full flex-col  gap-3`}>
+								<div className={`${styles.text} flex flex-col gap-3 mt-10`}>
 									<h2>Noszenie i pielęgnacja maluszka</h2>
 
 									<p className={` ${styles.paragraph}`}>Kurs dla rodzica • Nagrania wideo • Spotkanie online</p>

@@ -1,5 +1,13 @@
 .Hero {
-
+padding-top: 0;
+.bottomSection{
+	@media (max-width: 900px) {
+		display: flex;
+			justify-content: center;
+		flex-direction: column;
+	
+	}
+}
 	.Inner {
 		.leftSection {
 
