@@ -13,7 +13,7 @@ async function Seven() {
 						<h3>Przygotowałam zestaw filmów o noszeniu i opiece nad niemowlakiem</h3>
 					</div>
 					<div className={`${styles.bottomSection} flex  items-center mt-20`}>
-						<div className="Inner flex w-full items-center gap-10">
+						<div className={`${styles.inner} flex w-full items-center gap-10`}>
 							<div className={`${styles.leftSection} w-full`}>
 								<div className={`${styles.image} flex justify-center`}>
 									<Image src={Photo} alt="moj pierwszy ebook" width={361} height={322} />

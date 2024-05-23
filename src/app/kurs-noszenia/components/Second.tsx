@@ -6,11 +6,11 @@ import Link from "next/link";
 async function Second() {
 	return (
 		<>
-			<section className={`${styles.second} d-flex flex-center`}>
+			<section className={`${styles.second} flex justify-center`} id="info">
 				<div className={`Container `}>
 					<div className={`${styles.topSection} flex flex-col items-center`}>
 						<h2>Cześć!</h2>
-						<h3>Nazywam sie Magdalena Adas</h3>
+						<h3 className={` ${styles.bottomText}`}>Nazywam sie Magdalena Adas</h3>
 					</div>
 					<div className={`${styles.bottomSection} flex  items-center`}>
 						<div className={`${styles.Inner} flex items-center gap-10`}>

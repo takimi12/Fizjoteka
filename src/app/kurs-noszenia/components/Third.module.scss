@@ -1,4 +1,10 @@
 .bottomSection{
+@media (max-width: 900px) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
 ul {
     list-style-type: disc;
     li{

@@ -8,11 +8,19 @@
 	grid-template-rows: 1fr;
 	grid-gap: 20px;
 	gap: 20px;
+	@media screen and (max-width: 900px){
+		display: flex;
+		flex-direction: column;
+		
+	 }
 	.single {
 		display: grid;
 		grid-auto-rows: 220px 390px;
 		grid-row-gap: 30px;
-		height: 100%;
+		@media screen and (max-width: 900px){
+			grid-auto-rows:200px 250px;		
+		 }
+
 		.cardItem {
 			height: 100%;
 			max-width: 270px;
@@ -28,6 +36,11 @@
 			align-items: center;
 			gap: 20px;
 			text-align: center;
+			@media screen and (max-width: 900px){
+				width: 100%;
+				max-width: 100%;
+				
+			 }
 			h4{
 				font-size: 18px;
 				font-weight: 600;
@@ -52,6 +65,6 @@
 }
 .buble3 {
 	width: 170px;
-	top: 60vh;
+	top: 30vh;
 	left: 32vw;
 }

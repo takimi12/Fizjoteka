@@ -1,6 +1,18 @@
+.wrapper{
+display: flex;
+	@media screen and (max-width: 1199px) {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		
+	}
+	.searchSection{
+		display: flex;
+	}
+}
+
 .filters {
 	min-width: 250px;
-	margin-right: 60px;
 	padding: 15px;
 	background-color: #f5f6f5;
 	border-radius: 5px;

@@ -8,6 +8,11 @@
 		grid-column-gap: 50px;
 		grid-template-areas: "c c";
 		grid-template-columns: 1fr 1fr;
+		@media screen and (max-width: 899px){
+			display: flex;
+			flex-direction: column;
+			
+		 }
 		.leftSection {
 			display: flex;
 			align-items: start;

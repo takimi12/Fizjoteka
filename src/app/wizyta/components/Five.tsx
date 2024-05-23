@@ -8,13 +8,15 @@ async function Five() {
 		<>
 			<section className={`${styles.Ebook} d-flex flex-center`}>
 				<div className={`Container m-auto`}>
-					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className={`Inner flex items-center`}>
-							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
-								<div className={`${styles.text} flex flex-col gap-3`}>
+					<div className={`${styles.text} flex flex-col gap-3`}>
 									<h6 className={`${styles.mainHeading}`}>Metody, które stosuję</h6>
 
-									<div>
+									</div>
+									<div className={`${styles.bottomSection} flex  items-center`}>
+					<div className={`${styles.inner} w-full`}>
+						<div className={`Inner flex items-center`}>
+							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
+								
 										<ul>
 											<li className={` ${styles.list}`}>Osteopatia w pediatrii i neonatologii,</li>
 											<li className={` ${styles.list}`}>Zoga movement w terapii niemowląt,</li>
@@ -41,14 +43,14 @@ async function Five() {
 									</div>
 								</div>
 							</div>
-						</div>
-						<div className={`${styles.rightSection} w-full`}>
+							<div className={`${styles.rightSection} w-full`}>
 							<div className={`${styles.image} flex justify-center`}>
 								<Image src={Photo} alt="moj pierwszy ebook" width={361} height={322} />
 							</div>
 						</div>
+						</div>
 					</div>
-				</div>
+					
 			</section>
 		</>
 	);

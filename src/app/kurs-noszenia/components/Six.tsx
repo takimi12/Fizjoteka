@@ -12,7 +12,7 @@ async function Six() {
 						<h2>Nauczysz się, jak prawidłowo podnosić dziecko.</h2>
 					</div>
 					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className="Inner flex items-center">
+						<div className={`${styles.inner} flex items-center`}>
 							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
 								<div className={`${styles.text} flex flex-col gap-3`}>
 					

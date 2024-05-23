@@ -4,6 +4,11 @@
 	gap: 25px;
 	grid-auto-flow: row;
 	grid-template-columns: 1fr 1fr 1fr;
+	@media screen and (max-width: 900px){
+		display: flex;
+		flex-direction: column;;
+		
+	 }
 	.opinion {
 		background-color: #fff;
 		color: rgba(0, 0, 0, 0.87);

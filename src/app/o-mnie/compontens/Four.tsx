@@ -13,7 +13,7 @@ export default async function Four() {
 						<h3 className={` ${styles.lowHeading}`}>Asymetria ułoeniowa - poradniik dla rodzica</h3>
 					</div>
 					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className={`Inner flex items-center`}>
+						<div className={` ${styles.inner} flex items-center`}>
 							<div className={`${styles.leftSection} w-full`}>
 								<div className={`${styles.image} flex justify-center`}>
 									<Image src={Photo} alt="moj pierwszy ebook" width={361} height={322} />

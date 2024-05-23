@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/breadcrumbs/page";
 import etiquette from "../../../public/assets/Blog/etiquette.svg";
 import calendar from "../../../public/assets/Blog/calendar.svg";
 import BigFoto from "../../../public/assets/Blog/nauka-chodzenia.webp";
+
 function Hero() {
 	const data = [
 		{
@@ -33,36 +34,33 @@ function Hero() {
 				<div className="Container">
 					<h1 className={`${styles.mainHeading}`}>Rozwój dziecka okiem fizjoterapeuty</h1>
 					<div className={`${styles.blocs} `}>
-
 						{data.map((blog, index) => (
-							<div>
-							<div>
-								<Image src={blog.BigFoto} alt="Blog Title" />
-							</div>
-					
-							<div key={index} className={` ${styles.singlePost}`}>
-								
-								<div className={` ${styles.top}`}>
-									<h3>{blog.temat}</h3>
+							<div key={index}>
+								<div>
+									<Image src={blog.BigFoto} alt="Blog Title" />
 								</div>
-								<div className={` ${styles.bottom} flex  flex-col`}>
-									<div className={`${styles.callendar} flex gap-2`}>
-										<Image width={15} height={15} src={blog.title} alt="Blog Title" />
-										<p>{blog.data}</p>
+								<div className={` ${styles.singlePost}`}>
+									<div className={` ${styles.top}`}>
+										<h3>{blog.temat}</h3>
 									</div>
-									<div className={`${styles.etiquette} callendar flex gap-2`}>
-										<Image width={15} height={15} src={blog.calendar} alt="Calendar Icon" />
-										<ul className={`flex ${styles.ul} `}>
-											{blog.tagi.map((tag, index) => (
-												<li key={index}>{tag}, </li>
-											))}
-										</ul>
+									<div className={` ${styles.bottom} flex flex-col`}>
+										<div className={`${styles.callendar} flex gap-2`}>
+											<Image width={15} height={15} src={blog.title} alt="Blog Title" />
+											<p>{blog.data}</p>
+										</div>
+										<div className={`${styles.etiquette} callendar flex gap-2`}>
+											<Image width={15} height={15} src={blog.calendar} alt="Calendar Icon" />
+											<ul className={`flex ${styles.ul}`}>
+												{blog.tagi.map((tag, index) => (
+													<li key={index}>{tag}, </li>
+												))}
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
-</div>
 						))}
-													</div>
+					</div>
 				</div>
 			</section>
 		</>

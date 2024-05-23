@@ -11,11 +11,11 @@ function Hero() {
 					<div className="">
 						<div className={`flex flex-col items-center justify-center`}>
 							<h3 className={` ${styles.mainHeading}`}>Zapisz się na konsultację</h3>
-							<div className={` flex gap-10`}>
+							<div className={` flex gap-10 ${styles.inner}`}>
 								<div className={` w-full`}>
 									<Image className={` `} src={Wizyta} alt="Newsletter" width={408} height={404} />
 								</div>
-								<div className={` flex w-full items-center`}>
+								<div className={` flex w-full items-center ${styles.columnSection}`}>
 									<div className={` flex flex-col items-center`}>
 										<Link
 											href="https://widget.zarezerwuj.pl/direct/b02f996b-e919-4357-8c78-99b006488d85"

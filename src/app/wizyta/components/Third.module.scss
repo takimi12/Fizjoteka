@@ -1,4 +1,11 @@
 .Third{
+    .inner{
+        @media screen and (max-width: 899px){
+			display: flex;
+			flex-direction: column;
+            gap: 30px;
+		 }
+    }
     .topSection{
 
         margin-bottom: 50px;

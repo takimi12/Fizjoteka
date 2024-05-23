@@ -1,11 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Breadcrumbs from "@/components/breadcrumbs/page";
 import styles from "./FilmyEbooki.module.scss";
 import Circle from "../../../public/assets/Filmy-i-ebooki/circle.svg";
 import ProductPhoto from "../../../public/assets/Filmy-i-ebooki/c3c52257-dac2-4568-b0d9-5d261e331c46-Promocja_post Instagram (1).webp";
 import Image from "next/image";
 import Link from "next/link";
+import Modal from "./Modal"; // Import the new Modal component
 
 const products = [
 	{
@@ -65,11 +66,15 @@ const products = [
 	},
 ];
 
-function Hero() {
-	const [selectedCategories, setSelectedCategories] = useState([]);
-	const [filteredProducts, setFilteredProducts] = useState(products);
+type Category = "Rozwój dziecka" | "Nauka noszenia" | "Asymetria ułożeniowa" | "Webinar" | "Poradnik";
 
-	const handleCategoryChange = (category: any) => {
+function Hero() {
+	const [selectedCategories, setSelectedCategories] = useState<Category[]>([]);
+	const [filteredProducts, setFilteredProducts] = useState(products);
+	const [isDesktop, setIsDesktop] = useState(true);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+
+	const handleCategoryChange = (category: Category) => {
 		const updatedCategories = selectedCategories.includes(category)
 			? selectedCategories.filter((cat) => cat !== category)
 			: [...selectedCategories, category];
@@ -77,7 +82,7 @@ function Hero() {
 		setSelectedCategories(updatedCategories);
 	};
 
-	const filterProducts = () => {
+	useEffect(() => {
 		if (selectedCategories.length === 0) {
 			setFilteredProducts(products);
 		} else {
@@ -86,103 +91,158 @@ function Hero() {
 			);
 			setFilteredProducts(filtered);
 		}
-	};
+	}, [selectedCategories]);
 
 	const handleClearFilters = () => {
 		setSelectedCategories([]);
 		setFilteredProducts(products);
 	};
 
-	const currentDate = new Date();
+	useEffect(() => {
+		const handleResize = () => {
+			setIsDesktop(window.innerWidth >= 1200);
+		};
 
-	// Sformatuj datę do czytelnej formy
+		window.addEventListener("resize", handleResize);
+		handleResize(); // Set initial value
+
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
+	const currentDate = new Date();
 	const formattedDate = currentDate.toLocaleDateString();
 
 	return (
 		<>
 			<Breadcrumbs />
-			<section className={`${styles.blog} flex justify-center`}>
+						<section className={`${styles.blog} flex justify-center`}>
 				<div className={`Container flex`}>
-					<div>
-					<div className={` ${styles.filters}`}>
-						<h6>Kategoria</h6>
-						{[
-							"Rozwój dziecka",
-							"Nauka noszenia",
-							"Asymetria ułożeniowa",
-							"Webinar",
-							"Poradnik",
-						].map((category, index) => (
-							<div key={index} className={` mb-7 ${styles.inputs}`} >
-								<fieldset>
-									<label className="" htmlFor={category}>
-										<input
-											type="checkbox"
-											id={category}
-											className={` ${styles.checkbox}`}
-											checked={selectedCategories.includes(category)}
-											onChange={() => handleCategoryChange(category)}
-										/>
-										<span>{category}</span>
-									</label>
-								</fieldset>
-							</div>
-						))}
-						<div className="">
-							<button className={`Button ${styles.buttonLeft} `} onClick={filterProducts}>
-								Wyszukaj
-							</button>
-							<button className={` outline ${styles.noButton}`} onClick={handleClearFilters}>
-								wyczyść filtry
-							</button>
-						</div>
-					</div>
-					</div>
-					<div>
-						<div className="">
-							<div className={` text-center ${styles.mainSection}`}>
-									<h3>Znajdź produkt odpowiedni dla Ciebie</h3>
-									<p>
-									Uzyskując nieograniczony dostęp do filmów, masz szansę nadrobić webinary w
-									wygodnym dla siebie momencie.
-								</p>
-							</div>
-						</div>
-						{filteredProducts.length === 0 ? (
-							<p>Brak produktów do wyświetlenia.</p>
-						) : (
-							filteredProducts.map((product) => (
-								<div className={`${styles.singleProduct}`} key={product.id}>
-									<span className={` ${styles.availableTop}`}>{product.available}</span>
-									<span className={`${styles.date}`}>{formattedDate}</span>
-									<div className={`${styles.productPhoto}`}>
-										<Image src={product.photo} alt={product.title} width={300} height={300} />
-									</div>
-									<div className={`${styles.textWraper} w-full`}>
-										<div className={`${styles.cardTitle}`}>
-											<Link className={` ${styles.anchor}`} href="">
-												<h4>{product.title}</h4>
-											</Link>
-											<span className={` ${styles.underLink}`}>{product.date}</span>
+					<div className={` ${styles.wrapper}`}>
+						{isDesktop ? (
+							<div className={`${styles.searchSection} onlyDesktop`}>
+								<div className={`${styles.filters}`}>
+									<h6>Kategoria</h6>
+									{[
+										"Rozwój dziecka",
+										"Nauka noszenia",
+										"Asymetria ułożeniowa",
+										"Webinar",
+										"Poradnik",
+									].map((category, index) => (
+										<div key={index} className={` mb-7 ${styles.inputs}`}>
+											<fieldset>
+												<label className="" htmlFor={category}>
+													<input
+														type="checkbox"
+														id={category}
+														className={`${styles.checkbox}`}
+														checked={selectedCategories.includes(category as Category)}
+														onChange={() => handleCategoryChange(category as Category)}
+													/>
+													<span>{category}</span>
+												</label>
+											</fieldset>
 										</div>
-										<p className={` ${styles.mainText}`}>{product.text}</p>
-										<div className={`${styles.circle} `}>
-											<Image src={product.circle} alt="circle" width={15} height={15} />
-											<p>{product.available}</p>
-										</div>
-										<div className={`${styles.priceParent} flex items-center justify-end`}>
-											<p className={` ${styles.amount} font-bold`}> {product.price} zł</p>
-											<button className={`Button ${styles.button} `} onClick={filterProducts}>
-												Dodaj do koszyka
-											</button>
-										</div>
+									))}
+									<div className="">
+										<button className={`Button ${styles.buttonLeft}`} onClick={() => setFilteredProducts(filteredProducts)}>
+											Wyszukaj
+										</button>
+										<button className={` outline   ${styles.noButton}`} onClick={handleClearFilters}>
+											wyczyść filtry
+										</button>
 									</div>
 								</div>
-							))
+							</div>
+						) : (
+								<div className="m-auto">
+							<button className={` Button   onlyMobileButton`} onClick={() => setIsModalOpen(true)}>
+								Sprecyzuj czego szukasz
+							</button>
+							</div>
 						)}
+						<div>
+							<div className={` text-center ${styles.mainSection}`}>
+								<h3>Znajdź produkt odpowiedni dla Ciebie</h3>
+								<p>
+									Uzyskując nieograniczony dostęp do filmów, masz szansę nadrobić webinary w wygodnym dla siebie momencie.
+								</p>
+							</div>
+							{filteredProducts.length === 0 ? (
+								<p>Brak produktów do wyświetlenia.</p>
+							) : (
+								filteredProducts.map((product) => (
+									<div className={`${styles.singleProduct}`} key={product.id}>
+										<span className={` ${styles.availableTop}`}>{product.available}</span>
+										<span className={`${styles.date}`}>{formattedDate}</span>
+										<div className={`${styles.productPhoto}`}>
+											<Image src={product.photo} alt={product.title} width={300} height={300} />
+										</div>
+										<div className={`${styles.textWraper} w-full`}>
+											<div className={`${styles.cardTitle}`}>
+												<Link className={` ${styles.anchor}`} href="">
+													<h4>{product.title}</h4>
+												</Link>
+												<span className={` ${styles.underLink}`}>{product.date}</span>
+											</div>
+											<p className={` ${styles.mainText}`}>{product.text}</p>
+											<div className={`${styles.circle} `}>
+												<Image src={product.circle} alt="circle" width={15} height={15} />
+												<p>{product.available}</p>
+											</div>
+											<div className={`${styles.priceParent} flex items-center justify-end`}>
+												<p className={` ${styles.amount} font-bold`}> {product.price} zł</p>
+												<button className={`Button ${styles.button} `} onClick={() => { /* Handle add to cart */ }}>
+													Dodaj do koszyka
+												</button>
+											</div>
+										</div>
+									</div>
+								))
+							)}
+						</div>
 					</div>
 				</div>
 			</section>
+			{isModalOpen && (
+				<Modal onClose={() => setIsModalOpen(false)}>
+					<div className={`${styles.searchSection} onlyDesktop`}>
+						<div className={`${styles.filters}`}>
+							<h6>Kategoria</h6>
+							{[
+								"Rozwój dziecka",
+								"Nauka noszenia",
+								"Asymetria ułożeniowa",
+								"Webinar",
+								"Poradnik",
+							].map((category, index) => (
+								<div key={index} className={` mb-7 ${styles.inputs}`}>
+									<fieldset>
+										<label className="" htmlFor={category}>
+											<input
+												type="checkbox"
+												id={category}
+												className={`${styles.checkbox}`}
+												checked={selectedCategories.includes(category as Category)}
+												onChange={() => handleCategoryChange(category as Category)}
+											/>
+											<span>{category}</span>
+										</label>
+									</fieldset>
+								</div>
+							))}
+							<div className="">
+								<button className={`Button ${styles.buttonLeft}`} onClick={() => setFilteredProducts(filteredProducts)}>
+									Wyszukaj
+								</button>
+								<button className={` outline ${styles.noButton}`} onClick={handleClearFilters}>
+									wyczyść filtry
+								</button>
+							</div>
+						</div>
+					</div>
+				</Modal>
+			)}
 		</>
 	);
 }

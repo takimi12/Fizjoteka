@@ -24,13 +24,13 @@ function Hero() {
 								</div>
 								<div className={`flex gap-7`}>
 									<div className={`${styles.button}`}>
-										<Link href="/filmy-i-ebooki/asymetria-ulozeniowa">
+										<Link href="#info">
 											<button className={`secondaryButton`}>Czytaj więcej</button>
 										</Link>
 									</div>
 
 									<div className={`${styles.button}`}>
-										<Link href="/filmy-i-ebooki/asymetria-ulozeniowa">
+										<Link href="#products">
 											<button className={`Button_button__6pObN`}>Zobacz ofertę</button>
 										</Link>
 									</div>

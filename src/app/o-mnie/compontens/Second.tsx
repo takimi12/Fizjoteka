@@ -13,7 +13,7 @@ async function Second() {
 						<h6 className={`${styles.smaller}`}>Specjalizuję się w fizjoterapii niemowląt oraz dzieci z wadami postawy</h6>
 					</div>
 					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className={`Inner flex items-center`}>
+						<div className={`${styles.inner} flex items-center`}>
 							<div className={`${styles.leftSection} w-full`}>
 								<div className={`${styles.image} flex justify-center`}>
 									<Image src={Photo} alt="moj pierwszy ebook" width={361} height={322} />

@@ -10,3 +10,15 @@
     white-space: pre-wrap;
 	margin-bottom: 50px;
 }
+
+.bottomSection {
+    display: flex;
+
+    @media screen and (max-width: 899px){
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 0;
+     }
+
+}

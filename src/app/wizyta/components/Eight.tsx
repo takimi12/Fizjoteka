@@ -48,8 +48,8 @@ async function Eight() {
 								fizjoterapii niemowlęcej.
 							</li>
 						</ol>
-						<span className={styles.span}>
-							<b className="flex gap-4">
+						<div className={styles.span}>
+							<b className=" ">
 								Sprawdź, czy konsultacja online jest dla Ciebie. Najczęstsze pytania przeczytasz{" "}
 								<Link
 									className={styles.link}
@@ -57,11 +57,11 @@ async function Eight() {
 									rel="noopener noreferrer"
 									href="https://docs.google.com/document/d/1P9Iu4Wrn1o65wqPszzBi_q-X4GAZIWR-XfR0VdGBavE"
 								>
-									<b>tutaj</b>
+									tutaj
 								</Link>
-								.
+								
 							</b>
-						</span>
+						</div>
 					</div>
 				</div>
 			</section>

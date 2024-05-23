@@ -6,6 +6,14 @@
 	}
 }
 
+.blockParent{
+	@media screen and (max-width: 1199px){
+		display: flex;
+		flex-direction: column;
+		
+	 }
+
+}
 .singleBox {
 	border: 1px solid #ececec;
 	border-radius: 5px;
@@ -53,6 +61,9 @@
 
 .listParent {
 	min-height: 510px;
+	@media screen and (max-width: 1199px){
+		min-height: 200px;
+	 }
 	.list {
 		list-style-type: disc;
 		color: var(--primary);

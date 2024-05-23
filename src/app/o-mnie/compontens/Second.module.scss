@@ -6,6 +6,13 @@
 
 }
 .bottomSection{
+    .inner{
+        @media screen and (max-width: 899px){
+            display: flex;
+            flex-direction: column;
+            
+         }
+    }
     .rightSection {
         .smallerTitle{
             font-size: 25px;

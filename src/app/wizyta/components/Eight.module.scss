@@ -15,10 +15,8 @@
 .link {
 	background-color: transparent;
 	color: var(--primary);
-	display: flex;
-	align-items: center;
-	gap: 5px;
 	text-decoration: underline;
+	margin-left: 10px;
 }
 .link:hover {
 	background-color: transparent;

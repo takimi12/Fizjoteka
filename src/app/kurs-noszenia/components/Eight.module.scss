@@ -6,6 +6,11 @@
 }
 	.blockParent{
 		margin-bottom: 80px;
+		@media screen and (max-width: 900px){
+			display: flex;
+			flex-direction: column;;
+			
+		 }
 	.inner{
 	h5{
 		color: var(--primary);

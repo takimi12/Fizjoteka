@@ -12,7 +12,7 @@ async function Third() {
 						<h2 className={` text-center`}>Chcę, żeby każdy rodzic wiedział, jak prawidłowo nosić i podnosić swoje dziecko</h2>
 					</div>
 					<div className={`${styles.bottomSection} flex  items-center mt-10`}>
-						<div className={`Inner flex items-center`}>
+						<div className={`${styles.Inner} flex items-center`}>
 							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
 								<div className={`${styles.text} flex flex-col gap-3`}>
 									<h6>Podnoszenie i odkładanie noworodka</h6>
@@ -42,10 +42,9 @@ async function Third() {
 								</div>
 							</div>
 						</div>
-						<div className={`${styles.rightSection} w-full`}>
-							<div className={`${styles.image} flex justify-center`}>
+						<div className={`${styles.rightSection} w-full flex justify-content`}>
 								<Image src={Photo} alt="moj pierwszy ebook" width={361} height={322} />
-							</div>
+
 						</div>
 					</div>
 				</div>

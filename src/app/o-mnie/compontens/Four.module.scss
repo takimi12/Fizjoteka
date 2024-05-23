@@ -1,6 +1,15 @@
 .Four {
 	background-color: #f5f6f5;
 
+	.inner{
+		@media screen and (max-width: 899px){
+			display: flex;
+			flex-direction: column;
+			gap:30px
+			
+		 }
+	}
+
 .topSection{
 	margin-bottom: 30px;
 	.lowHeading{
