@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./Footer.module.scss";
 import instagramIcon from "../../../public/assets/Header/instagram.svg";
 import facebookIcon from "../../../public/assets/Header/facebook.svg";
-import tikTokIcon from "../../../public/assets/Header/tikTok.svg";
+import tikTokIcon from "../../../public/assets/Header/tiktok.svg";
 import youtubeIcon from "../../../public/assets/Header/youtube.svg";
 import login from "../../../public/assets/Footer/Login.svg";
 import Image from "next/image";
