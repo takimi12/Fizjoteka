@@ -3,18 +3,18 @@ import Photo from "../../../../public/assets/HomePage/Fizquizz/fizquiz.webp";
 import styles from "./Quizfizz.module.scss";
 import Link from "next/link";
 
-async function Hero() {
+async function Quizfizz() {
 	return (
 		<>
-			<section className={`${styles.Quiz} d-flex flex-center`}>
+			<section className={`${styles.Quiz} `}>
 				<div className={`Container m-auto`}>
-					<div className={`${styles.topSection} flex flex-col `}>
+					<div className={`${styles.topSection}  `}>
 						<h2>FizQuiz Asymetria</h2>
 					</div>
-					<div className={`${styles.bottomSection} flex  items-center`}>
-						<div className={`Inner flex items-center`}>
-							<div className={`${styles.leftSection} flex w-full flex-col justify-center gap-3`}>
-								<div className={`${styles.text} flex flex-col gap-5`}>
+					<div className={`${styles.bottomSection} `}>
+						<div className={`${styles.inner}`}>
+							<div className={`${styles.leftSection}  gap-3`}>
+								<div className={`${styles.text}  gap-5`}>
 									<p>
 										Asymetria ułożeniowa to jedno z najczęstszych schorzeń u niemowląt. Rodzice
 										często jednak nie wiedzą dużo na jej temat.
@@ -31,8 +31,8 @@ async function Hero() {
 								</div>
 							</div>
 						</div>
-						<div className={`${styles.rightSection} w-full`}>
-							<div className={`${styles.image} flex justify-center`}>
+						<div className={`${styles.rightSection} `}>
+							<div className={`${styles.image} `}>
 								<Image src={Photo} alt="moj pierwszy ebook" width={361} height={322} />
 							</div>
 						</div>
@@ -43,4 +43,4 @@ async function Hero() {
 	);
 }
 
-export default Hero;
+export default Quizfizz;

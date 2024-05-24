@@ -6,7 +6,7 @@ import Circle from "../../../public/assets/Filmy-i-ebooki/circle.svg";
 import ProductPhoto from "../../../public/assets/Filmy-i-ebooki/c3c52257-dac2-4568-b0d9-5d261e331c46-Promocja_post Instagram (1).webp";
 import Image from "next/image";
 import Link from "next/link";
-import Modal from "./Modal"; // Import the new Modal component
+import Modal from "./components//Modal"; 
 
 const products = [
 	{

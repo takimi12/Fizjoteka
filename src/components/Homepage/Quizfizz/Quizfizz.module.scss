@@ -1,5 +1,5 @@
 .Quiz{
-    padding: 50px 0px;
+
     h2{
         font-size: 38px;
     }
@@ -9,6 +9,7 @@
     }
     .bottomSection{
         display: flex;
+        align-items: center;
         @media screen and (max-width: 900px){
             display: grid;
             grid-template-columns: 1fr;
@@ -20,5 +21,31 @@
                 "b";
                 margin-top: 50px;
         }
+        .inner{
+            display: flex;
+            align-items: center;
+            .leftSection{
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                .text{
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            .rightSection{
+                width: 100%;
+                .image{                    
+                    display: flex;
+                    justify-content: center;
+                }
+            
+            }
+        }
     }
+}
+.topSection{
+    display: flex;
+    flex-direction: column;
 }
