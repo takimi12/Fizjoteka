@@ -1,5 +1,6 @@
 import {PrismaClient} from '@prisma/client'
 
+// to w tym commicie
 declare global {
     var prisma: PrismaClient | undefined
 }
