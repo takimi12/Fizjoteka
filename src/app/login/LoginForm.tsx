@@ -3,17 +3,24 @@
 import { AiOutlineGoogle } from "react-icons/ai";
 import Button from "../register/components/Button";
 import Heading from "../register/components/Heading";
-import Input from "../register/components/Input";
+import Input from "./components/Input";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
+import toast from "react-hot-toast";
+import { SafeUser } from "../register/types/index";
+
+interface LoginFormProps {
+  currentUser: SafeUser | null;
+}
 
 
 
-
-const LoginForm = () => {
+const LoginForm: React.FC<LoginFormProps> = ({currentUser}) => {
   const [isLoading, setIsLoading] = useState(false);
-
+ 
   const {
     register,
     handleSubmit,
@@ -25,12 +32,39 @@ const LoginForm = () => {
     },
   });
 
+  const router = useRouter();
+
+  useEffect(() => {
+    if (currentUser) {
+      router.push("/cart");
+      router.refresh();
+    }
+  }, [currentUser]);
+
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
+    signIn('credentials',{
+      ...data,
+      redirect: false
+    }).then((callback) => {
+      setIsLoading(false)
 
-
+      if (callback?.ok) {
+        router.push('/dashboard');
+        router.refresh();
+        toast.success("Logged in");
+      } 
+      if (callback?.error) {
+       toast.error(callback.error);
+      }
+    })
   };
+
+  if (currentUser) {
+    return <p className="rext-center"> Logged in Redirecting...</p>;
+
+  }
 
 
 
@@ -41,7 +75,7 @@ const LoginForm = () => {
         outline
         label="Continue with Google"
         icon={AiOutlineGoogle}
-        onClick={() =>{} }
+        onClick={() =>{signIn('google')} }
       />
       <hr className="bg-slate-300 w-full h-px" />
       <Input
