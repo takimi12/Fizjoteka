@@ -1,11 +1,15 @@
 'use client';
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Heading from "../../components/Heading/Heading";
 import Input from "../../components/inputs/input";
 import Button from "../../components/Button/Button";
 import {FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import Link from "next/link";
+import axios from "axios";
+import {signIn} from "next-auth/react";
+import toast from "react-hot-toast";
+import { useRouter } from "next/navigation";
 
 const RegisterForm = () => {    
     const [isLoading, setIsLoading] = useState(false);
@@ -17,10 +21,41 @@ const RegisterForm = () => {
         },
 });
 
+const router = useRouter();
+
+
 const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
-    console.log(data);
-}
+
+    axios
+    .post("/api/register", data)
+    .then(() => {
+      toast.success("Account created");
+
+      signIn("credentials", {
+        email: data.email,
+        password: data.password,
+        redirect: false,
+      }).then((callback) => {
+        setIsLoading(false);
+
+        if (callback?.ok) {
+          router.push("/login");
+          router.refresh();
+          toast.success("Logged in");
+        }
+
+        if (callback?.error) {
+          toast.error(callback.error);
+        }
+      });
+    })
+    .catch(() => toast.error("Something went wrong"))
+    .finally(() => {
+      setIsLoading(false);
+    });
+};
+
 
     return (
         <>
