@@ -1,5 +1,5 @@
-import FormWrap from "../components/FormWrapper";
-import Container from "../components/Container";
+import FormWrap from "../../components/FormWrap/FormWrap";
+import Container from "../../components/Container/Container";
 import LoginForm from "./LoginForm";
 
 const Login = async () => {
@@ -7,7 +7,7 @@ const Login = async () => {
   return (
     <Container>
       <FormWrap>
-        <LoginForm currentUser= {currentUser}  />
+        <LoginForm   />
       </FormWrap>
     </Container>
   );
