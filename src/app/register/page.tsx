@@ -2,20 +2,27 @@
 
 import Link from "next/link";
 import React, { useState, useContext, useEffect } from "react";
+import AuthContext from "../../../context/AuthContext";
 
 
 const Register = () => {
-
+  const {  error, registerUser, clearErrors } = useContext(AuthContext);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  useEffect(() => {
+    if (error) {
+      error(error);
+      clearErrors();
+    }
+  }, [error]);
 
-  const submitHandler = (e:any) => {
+  const submitHandler = (e) => {
     e.preventDefault();
 
-
+    registerUser({ name, email, password });
   };
 
   return (

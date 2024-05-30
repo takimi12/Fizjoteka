@@ -3,7 +3,7 @@ import Header from "@/components/Header/page";
 import Footer from "@/components/Footer/page";
 import "./globals.scss";
 import { Poppins } from "./fonts";
-
+import { GlobalProvider } from './GlobalProvider'
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -26,8 +26,10 @@ export default async function RootLayout({
 		<html lang={locale}>
 			<body className={Poppins.className}>
 				<Header />
-
-				{children}
+   
+<GlobalProvider>
+{children}
+</GlobalProvider>
 				<Footer />
 			</body>
 		</html>
