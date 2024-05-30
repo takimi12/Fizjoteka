@@ -5,7 +5,9 @@ import { SessionProvider } from "next-auth/react";
 import toast, { Toaster } from 'react-hot-toast';
 
 
+
 export function GlobalProvider({ children }) {
+
   return (
     <>
    

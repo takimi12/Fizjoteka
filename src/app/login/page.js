@@ -21,20 +21,19 @@ const Login = () => {
     const data = await signIn("credentials", {
       email,
       password,
-       callbackUrl: callBackUrl ? parseCallbackUrl(callBackUrl) : "/login",
+       callbackUrl: callBackUrl ? parseCallbackUrl(callBackUrl) : "/admin",
        
       //callbackUrl: false,
     });
       console.log("data===>", data)
     if (data?.error) {
-      Error(data?.error);
+      error(data?.error);
       toast.error("Registration failed. Try again.");
-
     }
 
     if (data?.ok) {
       toast.success("Registration successful");
-      router.push("/");
+      router.push("/admin");
       
     }
   };

@@ -4,6 +4,7 @@ import Footer from "@/components/Footer/page";
 import "./globals.scss";
 import { Poppins } from "./fonts";
 import { GlobalProvider } from './GlobalProvider'
+import Navbar from "../../components/nav/NavBar"
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -11,26 +12,20 @@ export const metadata: Metadata = {
 };
 
 
-interface RootLayoutProps {
-	children: React.ReactNode;
-	params: {
-		locale: string;
-	};
-}
 
-export default async function RootLayout({
-	children,
-	params: { locale },
-}: Readonly<RootLayoutProps >) {
+
+export default async function RootLayout({ children }: { children: React.ReactNode;  }) {
 	return (
-		<html lang={locale}>
+		<html >
 			<body className={Poppins.className}>
+			<GlobalProvider>
+
 				<Header />
-   
-<GlobalProvider>
+
 {children}
-</GlobalProvider>
+
 				<Footer />
+				</GlobalProvider>
 			</body>
 		</html>
 	);

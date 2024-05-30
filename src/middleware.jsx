@@ -9,6 +9,7 @@ export default withAuth(
     // authorize roles
     const url = req.nextUrl.pathname;
     const userRole = req?.nextauth?.token?.user?.role;
+   
 
     if (url?.startsWith("/admin") && userRole !== "admin") {
       return NextResponse.redirect(new URL("/", req.url));
@@ -28,5 +29,5 @@ export default withAuth(
 );
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: ["/admin"],
 };
