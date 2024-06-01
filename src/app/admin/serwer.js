@@ -7,7 +7,7 @@ export default function Navbar({ fixed }) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
   const {data} = useSession();
   const logoutHandler = () => {
-    signOut();
+    signOut({ callbackUrl: '/login' });
   };
   console.log( data)
   return (

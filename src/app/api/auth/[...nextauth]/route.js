@@ -1,6 +1,7 @@
-import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import GoogleProvider from "next-auth/providers/google";
+
+
+import NextAuth from "next-auth";
 import bcrypt from "bcryptjs";
 import User from "../../../../../backend/models/user";
 import dbConnect from "../../../../../backend/config/dbConnect";
@@ -35,10 +36,6 @@ const handler= NextAuth( {
           return user;
         },
       }),
-      GoogleProvider({
-             clientId: process.env.GOOGLE_CLIENT_ID,
-              clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-             }),
     ],
     callbacks: {
       jwt: async ({ token, user }) => {
@@ -56,8 +53,51 @@ const handler= NextAuth( {
       },
     },
     pages: {
-      signIn: "/admin",
+ error: "/auth/error",
     },
     secret: process.env.NEXTAUTH_SECRET,
   });
   export { handler as GET, handler as POST };
+// Strona admina
+import { signOut, useSession } from 'next-auth/react';
+import Link from 'next/link';
+import React from 'react';
+
+export default function AdminPage() {
+  const { data: session } = useSession();
+
+  const logoutHandler = () => {
+    signOut({ callbackUrl: '/login' });
+  };
+
+  const isAdmin = session?.user?.role === 'admin';
+
+  return (
+    <>
+      <nav>
+        <ul>
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          {isAdmin && (
+            <li>
+              <Link href="/admin">Admin</Link>
+            </li>
+          )}
+          {session ? (
+            <li>
+              <button onClick={logoutHandler}>Logout</button>
+            </li>
+          ) : (
+            <li>
+              <Link href="/login">Login</Link>
+            </li>
+          )}
+        </ul>
+      </nav>
+    </>
+  );
+}
