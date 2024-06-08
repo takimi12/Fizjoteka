@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import styles from "./EditTopi.module.scss";
 
 export default function EditTopicForm({ id, title, description }) {
   const [newTitle, setNewTitle] = useState(title);
   const [newDescription, setNewDescription] = useState(description);
+  const [showPopup, setShowPopup] = useState(false);
 
   const router = useRouter();
 
@@ -21,11 +23,14 @@ export default function EditTopicForm({ id, title, description }) {
         body: JSON.stringify({ newTitle, newDescription }),
       });
 
-      if (!res.ok) {
-        throw new Error("Failed to update topic");
+      if (res.ok) {
+        setNewTitle(""); // Clear input fields
+        setNewDescription(""); // Clear input fields
+        setShowPopup(false); // Close popup
+        router.refresh(); // Refresh router
+      } else {
+        throw new Error("Failed to create a topic");
       }
-
-      router.refresh();
 
     } catch (error) {
       console.log(error);
@@ -33,7 +38,13 @@ export default function EditTopicForm({ id, title, description }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <>
+      {showPopup && (
+
+<div className={styles.popupBackground}>
+<div className={styles.popup}>
+
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3">
       <input
         onChange={(e) => setNewTitle(e.target.value)}
         value={newTitle}
@@ -50,9 +61,17 @@ export default function EditTopicForm({ id, title, description }) {
         placeholder="Topic Description"
       />
 
-      <button className="bg-green-600 font-bold text-white py-3 px-6 w-fit">
+      <button  className="bg-green-600 font-bold text-white py-3 px-6 w-fit">
         Update Topic
       </button>
+      <button onClick={() => setShowPopup(false)}>Close</button>
     </form>
+    </div>
+    </div>
+   )}
+    <button onClick={() => setShowPopup(true)} className="bg-green-600 font-bold text-white py-3 px-6 w-fit">
+        Update Topic
+      </button>
+    </>
   );
 }

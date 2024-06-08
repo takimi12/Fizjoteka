@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ActiveLink from "../../ActiveLink/page";
 import { useEffect, useState } from "react";
+import LocalSwitcher from "@/components/localSwitcher/localSwitcher";
 
 const Header = () => {
 	const [isSticky, setIsSticky] = useState(false);
@@ -103,7 +104,8 @@ const Header = () => {
 							<Link className={styles.anchor} href="/wizyta">
 								Wizyta
 							</Link>
-							<button>En</button>
+
+							<LocalSwitcher />
 							<div className={styles.cart}>
 								<Image src={cart} width={15} height={15} alt="cart" />
 								<div className={styles.cartContent}>
