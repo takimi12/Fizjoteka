@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import Header from "@/components/Header/page";
-import Footer from "@/components/Footer/page";
+import React from "react";
+import Header from "../../components/Header/page";
+import Footer from "../../components/Footer/page";
 import "./globals.scss";
 import { Poppins } from ".././fonts";
 import { GlobalProvider } from '.././GlobalProvider'

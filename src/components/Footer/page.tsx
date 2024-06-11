@@ -1,3 +1,5 @@
+import React from "react" ;
+import Form from "./components/Form";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 import instagramIcon from "../../../public/assets/Header/instagram.svg";
@@ -38,70 +40,7 @@ const Footer = () => {
 							</p>
 						</div>
 					</div>
-					<div className={`${styles.right}`}>
-						<div className={`${styles.form} flex flex-col gap-3`}>
-							<p>
-								Zapisz się na newsletter a otrzymasz w prezencie kalendarz rozwoju dziecka w
-								pierwszym roku życia
-							</p>
-							<form >
-								<div>
-									<div className={` ${styles.inputWraper}`}>
-										<fieldset>
-											<label htmlFor="FirstName">
-												Imię{" "}
-												<input
-													className={styles.input}
-													type="text"
-													required
-													name="FirstName"
-													id="FirstName"
-													value=""
-												/>
-												<span></span>
-											</label>
-										</fieldset>
-									</div>
-									<div className={`${styles.inputWraper}`}>
-										<fieldset>
-											<label className="" htmlFor="Email">
-												Adres email{" "}
-												<input
-													className={` ${styles.input}`}
-													type="email"
-													required
-													name="Email"
-													id="Email"
-													value=""
-												/>
-												<span></span>
-											</label>
-										</fieldset>
-									</div>
-									<div className={` ${styles.inputWraper}`}>
-										<fieldset>
-											<label htmlFor="AcceptRegulations">
-												<input
-													className={` ${styles.accept}`}
-													required
-													type="checkbox"
-													name="AcceptRegulations"
-													id="AcceptRegulations"
-												/>
-												<span className={` ${styles.acceptSpan}`}>
-													Wyrażam zgodę na wysyłanie maili. W każdym momencie mogę wypisać się z
-													listy mailingowej.
-												</span>
-											</label>
-										</fieldset>
-									</div>
-									<button aria-busy="false" >
-										CHCĘ OTRZYMAĆ KALENDARZ
-									</button>
-								</div>
-							</form>
-						</div>
-					</div>
+					<Form />
 				</div>
 			</div>
 
