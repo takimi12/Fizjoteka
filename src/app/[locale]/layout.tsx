@@ -5,6 +5,8 @@ import Footer from "../../components/Footer/page";
 import "./globals.scss";
 import { Poppins } from ".././fonts";
 import { GlobalProvider } from '.././GlobalProvider'
+import Provider from "..//Redux/Provider"
+
 
 export const metadata: Metadata = {
 	title: "Create Next App",
@@ -22,11 +24,13 @@ export default async function RootLayout({ children, params:{locale} }: Readonly
 	return (
 		<html lang={locale}>
 			<body className={Poppins.className}>
-			<GlobalProvider>
+<Provider >
+				<GlobalProvider>
 				<Header />
 {children}
 				<Footer />
 				</GlobalProvider>
+				</Provider>
 			</body>
 		</html>
 	);

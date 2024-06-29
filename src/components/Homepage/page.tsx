@@ -5,7 +5,6 @@ import Help from "./Help/page";
 import Ebook from "./Ebook/page";
 import QuizFiz from "./Quizfizz/page";
 import Contact from "./Contact/page";
-import Form from "./form";
 
 
 export default async function HomeLayout() {

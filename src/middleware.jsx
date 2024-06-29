@@ -13,26 +13,23 @@ export default withAuth(
     const intlResponse = intlMiddleware(req);
     if (intlResponse) return intlResponse;
 
-  //   // Autoryzacja
-  //   const url = req.nextUrl.pathname;
-  //   const userRole = req?.nextauth?.token?.user?.role;
+    // Autoryzacja
+    const url = req.nextUrl.pathname;
+    const userRole = req?.nextauth?.token?.user?.role;
 
-  //   if (url.startsWith("/admin") && userRole !== "admin") {
-  //     return NextResponse.redirect(new URL("/", req.url));
-  //   }
+    if (url.startsWith("/admin") && userRole !== "admin") {
+      return NextResponse.redirect(new URL("/", req.url));
+    }
 
-  //   return NextResponse.next();
-  // },
-  // {
-  //   callbacks: {
-  //     authorized: ({ token }) => !!token,
-  //   },
+    return NextResponse.next();
+  },
+  {
+    callbacks: {
+      authorized: ({ token }) => !!token,
+    },
   }
 );
 
-// export const config = {
-//   matcher: ['/', '/(pl|en)/:path*', '/admin/:path*', ],
-// };
 export const config = {
-  matcher: ['/', '/(pl|en)/:path*',  ],
+  matcher: ['/', '/(pl|en)/:path*', '/admin/:path*', ],
 };

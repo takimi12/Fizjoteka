@@ -1,30 +1,39 @@
-import RemoveBtn from "./Remove";
 import AddTopic from "./AddTopic";
-import EditTopic from "./EditTopic";
-import { getTopics } from "./api/getTopic";
+import { getTopics } from "../../../helpers/api/getTopic";
+import {getCategory} from "../../../helpers/api/getCategory"
+import styles from "./TopicList.module.scss";
+import TopicCategory from "./components/categoryList"
+import TopicList from "./components/topicsList"
+import AddCategory from "./AddCategory"
 
-export default async function TopicsList(props) {
-  const { topics } = await getTopics();
+
+
+
+export default async function TopicsList() {
+  const  {topics}  = await getTopics();
+  const {categories} = await getCategory();
+
+ 
 
   return (
-    <div>
-      <AddTopic  />
-      {topics.map((t) => (
-        <div
-          key={t._id}
-          className="p-4 border border-slate-300 my-3 flex justify-between gap-5 items-start"
-        >
-          <div>
-            <h2 className="font-bold text-2xl">{t.title}</h2>
-            <div>{t.description}</div>
-          </div>
 
-          <div className="flex gap-2">
-            <RemoveBtn id={t._id} />
-            <EditTopic id={t._id} />
-          </div>
-        </div>
-      ))}
+ <>
+    <div className={`Container m-auto ${styles.adminBar}`}>
+      <div>
+        <h2>Lista Produktów</h2>
+      </div>
+
+      <AddTopic />
+      <AddCategory />
     </div>
+
+
+    <div className="Container  mx-auto py-8">
+
+<TopicCategory categories={categories} />       
+<TopicList topics={topics}/>
+
+    </div>
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react" ;
-import Form from "./components/Form";
+// import Form from "./components/Form";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 import instagramIcon from "../../../public/assets/Header/instagram.svg";
@@ -8,41 +8,12 @@ import tikTokIcon from "../../../public/assets/Header/tiktok.svg";
 import youtubeIcon from "../../../public/assets/Header/youtube.svg";
 import login from "../../../public/assets/Footer/Login.svg";
 import Image from "next/image";
-import check from "../../../public/assets/Footer/Checkin.svg";
+import TopFooter from "./components/TopSection";
 
 const Footer = () => {
 	return (
 		<>
-			<div className={` ${styles.newsletter} flex flex-col items-center`}>
-				<div className={`Container ${styles.newsletterContainer}`}>
-					<h2 className={` ${styles.mainHeading}`}>Nadal masz wątpliwości?</h2>
-				</div>
-
-				<div className={` ${styles.container} Container `}>
-					<div className={`${styles.left} flex flex-col `}>
-						<div className={`${styles.top} flex items-center gap-3`}>
-							<Image src={check} width={50} height={50} alt="logo" />
-							<h3>Wszystkie produkty objęte są gwarancją jakości.</h3>
-						</div>
-						<div className={`${styles.bottom} flex flex-col`}>
-							<p>Jestem pewna jakości opracowanych przeze mnie materiałów.</p>
-							<p>
-								Jeśli jednak po zakupie nie spełnią one Twoich indywidualnych oczekiwań wystarczy,
-								że napiszesz do mnie a otrzymasz zwrot pieniędzy.
-							</p>
-							<p>
-								Możesz również zacząć od darmowego pierwszego rozdziału e-booka. Wypełnij formularz
-								zapisu na newsletter, a wyślę go na podany adres mailowy.
-							</p>
-							<p>
-								Masz pytanie dotyczące oferty? Koniecznie napisz do mnie maila lub wiadomość na
-								Facebooku.
-							</p>
-						</div>
-					</div>
-					<Form />
-				</div>
-			</div>
+			<TopFooter />
 
 			<footer className={` ${styles.footer}`}>
 				<div className={` ${styles.container} Container`}>

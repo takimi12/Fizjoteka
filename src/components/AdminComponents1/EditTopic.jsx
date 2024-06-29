@@ -18,7 +18,15 @@ const getTopicById = async (id) => {
 
 export default async function EditTopic({ id }) {
   const { topic } = await getTopicById(id);
-  const { title, description } = topic;
 
-  return <EditTopicForm id={id} title={title} description={description} />;
+  const { title,subtitle, description, price, category, imageFileUrl,pdfFileUrl } = topic;
+
+  return <EditTopicForm id={id} title={title} subtitle={subtitle} description={description} price={price} category={category} imageFileUrl={imageFileUrl} pdfFileUrl={pdfFileUrl}/>;
 }
+
+
+
+
+
+
+
