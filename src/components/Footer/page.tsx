@@ -1,5 +1,5 @@
 import React from "react" ;
-// import Form from "./components/Form";
+import Form from "./components/Form";
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 import instagramIcon from "../../../public/assets/Header/instagram.svg";

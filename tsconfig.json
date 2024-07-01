@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "api/register/route.js", "src/middleware.jsx", "src/app/register/page.jsx", "context/AuthContext.js", "api/auth/[...nextauth]/route.js", "src/app/api/topics/route.js", "src/components/AdminComponents/TopicsList.jsx", "src/app/api/add-product/route.js", "src/app/api/images/route.ts", "src/app/api/s3-upload/route.ts", "src/app/api/getAmazon/route.ts", "src/app/api/list/route.ts", "src/app/[locale]/koszyk/przelewypage.mdx", "src/app/Redux/Store.ts", "src/app/login/page.tsx", "src/components/AdminComponents1/AddTopic.jsx", "src/components/AdminComponents1/EditCategory.jsx", "src/components/Header/components/DesktopHeader.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "api/register/route.js", "src/middleware.jsx", "src/app/[locale]/register/page.jsx", "context/AuthContext.js", "api/auth/[...nextauth]/route.js", "src/app/api/topics/route.js", "src/components/AdminComponents/TopicsList.jsx", "src/app/api/add-product/route.js", "src/app/api/images/route.ts", "src/app/api/s3-upload/route.ts", "src/app/api/getAmazon/route.ts", "src/app/api/list/route.ts", "src/app/[locale]/koszyk/przelewypage.mdx", "src/app/Redux/Store.ts", "src/app/[locale]/login/page.tsx", "src/components/AdminComponents1/AddTopic.jsx", "src/components/AdminComponents1/EditCategory.jsx", "src/components/Header/components/DesktopHeader.jsx"],
   "exclude": ["node_modules"]
 }
