@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation';
-import styles from './Error.module.css';
+import styles from './error.module.css';
 import Link from 'next/link';
 
 export default function AuthError() {
