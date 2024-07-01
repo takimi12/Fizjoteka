@@ -4,8 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import NextAuth from "next-auth";
 import bcrypt from "bcryptjs";
 import User from "../../../../../backend/models/user";
-import dbConnect from "../../../../../backend/config/dbConnect";
-
+import dbConnect from "../../../../../backend/config/dbconnect"
 
 const handler= NextAuth( {
     session: {

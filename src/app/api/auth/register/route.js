@@ -1,4 +1,4 @@
-import dbConnect from "../../../../../backend/config/dbConnect";
+import dbConnect from "../../../../../backend/config/dbconnect";
 import User from "../../../../../backend/models/user";
 import { NextResponse } from "next/server";
 
