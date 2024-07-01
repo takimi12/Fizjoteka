@@ -7,33 +7,31 @@ function capitalizeFirstLetter(str: string): string {
 	return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
+
 function Breadcrumbs() {
-	const pathname = usePathname();
+    const pathname = usePathname();
 
-	// Zamień "-" na spację i wykonaj kapitalizację pierwszej litery każdego słowa w cleanPathname
-	const cleanPathname = pathname.startsWith("/")
-		? pathname
-				.slice(1)
-				.replace(/-/g, " ")
-				.replace(/\b\w/g, (match) => match.toUpperCase())
-		: pathname.replace(/-/g, " ").replace(/\b\w/g, (match) => match.toUpperCase());
+    // Sprawdzenie, czy pathname nie jest null za pomocą optional chaining (?.)
+    const cleanPathname = pathname?.startsWith("/")
+        ? pathname.slice(1).replace(/-/g, " ").replace(/\b\w/g, (match) => match.toUpperCase())
+        : pathname?.replace(/-/g, " ").replace(/\b\w/g, (match) => match.toUpperCase());
 
-	return (
-		<section className={`flex flex-col items-center`}>
-			<div className={`${styles.locations} Container`}>
-				<p className={`${styles.color}`}>
-					<Link className={`body-small ${styles.color}`} href="/">
-						Start &nbsp;
-					</Link>
-				</p>
-				<span className={styles.breadcrumb}>/</span>
-				<p className={` `}>
-					&nbsp;
-					{cleanPathname}
-				</p>
-			</div>
-		</section>
-	);
+    return (
+        <section className={`flex flex-col items-center`}>
+            <div className={`${styles.locations} Container`}>
+                <p className={`${styles.color}`}>
+                    <Link className={`body-small ${styles.color}`} href="/">
+                        Start &nbsp;
+                    </Link>
+                </p>
+                <span className={styles.breadcrumb}>/</span>
+                <p className={` `}>
+                    &nbsp;
+                    {cleanPathname}
+                </p>
+            </div>
+        </section>
+    );
 }
 
 export default Breadcrumbs;
